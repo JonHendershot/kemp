@@ -1,0 +1,23 @@
+* {
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: $header_font;
+	text-transform: uppercase;
+}
+h2 {
+	letter-spacing: 8px;
+	font-size: 40px;
+	font-weight: 400;
+}
+p, div, span, input, textarea, button {
+	font-family: $body_font;
+}
+textarea {
+	resize: none;
+	border: none;
+}
+br {
+	display: none;
+}
