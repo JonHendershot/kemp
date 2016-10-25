@@ -227,7 +227,8 @@ header.static-nav .nav-bar {
     width: 900px;
     margin: 25px auto 0;
     line-height: 2em;
-    text-align: justify; }
+    text-align: justify;
+    text-transform: uppercase; }
 
 .service {
   padding: 0;
