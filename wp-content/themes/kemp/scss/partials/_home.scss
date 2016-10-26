@@ -38,7 +38,9 @@
 		font-weight: 600;
 		font-size: 13px;
 		letter-spacing: 4px;
-		width: 900px;
+		padding-left: 4px;
+		@include calc(width,"100% - 60px");
+		max-width: 900px;
 		margin: 25px auto 0 ;
 		line-height: 2em;
 		text-align: justify;

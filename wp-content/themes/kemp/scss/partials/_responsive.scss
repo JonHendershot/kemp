@@ -1,0 +1,80 @@
+@media only screen and (max-width: 768px) {
+	.service, .service .clip-text {
+		background-attachment: scroll;
+	}
+	.service-wrapper {
+		top: inherit !important;
+	}
+	.service .clip-text {
+		-webkit-text-fill-color: $black;
+	    -webkit-background-clip: inherit;
+		background: $white;
+		background-image: none !important;
+	    background-position: top;
+	    background-attachment: fixed;
+	    background-repeat: no-repeat;
+	    color: $black;
+	    filter: invert(0%);
+	    -webkit-filter: invert(0%);
+	    margin: 0 auto !important;
+	    padding: 30px 0 10px;
+	    p {
+		    margin: -1px auto;
+	    }
+	}
+	.service .clip-text.service-content {
+		padding: 10px 0 40px;
+	}
+	
+	.service.videography .clip-text {
+		-webkit-text-fill-color: $white;
+		background: $black;
+	    color: $white;
+	}
+	.service.branding {
+		height: 100vh;
+
+		.clip-text {
+			background: transparent;
+		}
+		.service-wrapper {
+			right: 35px;
+		}
+	}
+	.service.process {
+		.service-wrapper {
+			top: 0 !important;
+		}
+	}
+	.home-contact {
+		padding: 0;
+		height: 100vh;
+		@include flexbox(center,center);
+		.wrapper {
+			
+		}
+	}
+}
+@media (max-width: 768px){
+	.home-header {
+		padding: 0;
+		height: 100vh;
+		p {
+			font-size: 17px;
+			letter-spacing: 10px;
+			padding-left: 10px;
+		}
+		h1 {
+			font-size: 65px;
+			margin: 0;
+			padding-top: 75px;
+		}
+	}
+	.home-contact {
+		form {
+			 p {
+				 width: 72%;
+			 }
+		}
+	}
+}

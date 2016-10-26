@@ -224,7 +224,12 @@ header.static-nav .nav-bar {
     font-weight: 600;
     font-size: 13px;
     letter-spacing: 4px;
-    width: 900px;
+    padding-left: 4px;
+    width: -o-calc(100% - 60px);
+    width: -moz-calc(100% - 60px);
+    width: -webkit-calc(100% - 60px);
+    width: calc(100% - 60px);
+    max-width: 900px;
     margin: 25px auto 0;
     line-height: 2em;
     text-align: justify;
@@ -772,3 +777,67 @@ aside {
       -o-transition: 0.3s all ease-in-out; }
     aside .search-container input[type="submit"]:hover {
       color: #000; }
+
+/*************************************
+  - - - - - - RESPONSIVE - - - - - - - 
+**************************************/
+@media only screen and (max-width: 768px) {
+  .service, .service .clip-text {
+    background-attachment: scroll; }
+  .service-wrapper {
+    top: inherit !important; }
+  .service .clip-text {
+    -webkit-text-fill-color: #000;
+    -webkit-background-clip: inherit;
+    background: #dedede;
+    background-image: none !important;
+    background-position: top;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: #000;
+    filter: invert(0%);
+    -webkit-filter: invert(0%);
+    margin: 0 auto !important;
+    padding: 30px 0 10px; }
+    .service .clip-text p {
+      margin: -1px auto; }
+  .service .clip-text.service-content {
+    padding: 10px 0 40px; }
+  .service.videography .clip-text {
+    -webkit-text-fill-color: #dedede;
+    background: #000;
+    color: #dedede; }
+  .service.branding {
+    height: 100vh; }
+    .service.branding .clip-text {
+      background: transparent; }
+    .service.branding .service-wrapper {
+      right: 35px; }
+  .service.process .service-wrapper {
+    top: 0 !important; }
+  .home-contact {
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    align-items: center;
+    -webkit-align-items: center;
+    justify-content: center;
+    -webkit-justify-content: center; } }
+
+@media (max-width: 768px) {
+  .home-header {
+    padding: 0;
+    height: 100vh; }
+    .home-header p {
+      font-size: 17px;
+      letter-spacing: 10px;
+      padding-left: 10px; }
+    .home-header h1 {
+      font-size: 65px;
+      margin: 0;
+      padding-top: 75px; }
+  .home-contact form p {
+    width: 72%; } }
