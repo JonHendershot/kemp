@@ -865,14 +865,25 @@ aside {
 
 @media (max-width: 420px) {
   h2 {
-    font-size: 25px; }
+    font-size: 25px;
+    letter-spacing: 5px;
+    padding-left: 5px !important; }
   .home-header h1 {
-    font-size: 38px; }
+    font-size: 56px;
+    line-height: 49px;
+    text-align: left;
+    margin-left: 30px; }
   .home-header p {
-    font-size: 12px;
-    letter-spacing: 8px;
-    padding-left: 8px;
-    margin-top: -7px; }
+    font-size: 15px;
+    letter-spacing: 6px;
+    padding-left: 6px;
+    margin-top: 3px;
+    text-align: left;
+    margin-left: 30px; }
+  .service div.service-content {
+    font-size: 9px;
+    letter-spacing: 2px;
+    padding-left: 2px; }
   .about h2 {
     width: 60%; }
   .about p {
@@ -881,3 +892,12 @@ aside {
     padding-left: 3px; }
   .home-contact form p {
     width: 95%; } }
+
+@media (max-width: 375px) {
+  .home-header h1 {
+    font-size: 48px;
+    line-height: 39px;
+    margin-left: 34px; }
+  .home-header p {
+    font-size: 12px;
+    margin-left: 34px; } }
