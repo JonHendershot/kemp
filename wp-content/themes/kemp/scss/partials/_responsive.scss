@@ -107,6 +107,15 @@
 				 width: 72%;
 			 }
 		}
+		ul.socials {
+			.divider, .social-text {
+				display: none;
+			}
+			.fa {
+				display: block;
+				font-size: 20px;
+			}
+		}
 	}
 }
 @media (max-width: 420px){
@@ -142,6 +151,17 @@
 			font-size: 8px;
 			letter-spacing: 1px;
 			padding-left: 1px;
+		}
+	}
+	
+	.service.branding {
+		background-position: -75px bottom;
+		
+		.service-wrapper {
+			right: 0;
+			left: 0;
+			width: 95%;
+			bottom: 85px;
 		}
 	}
 	

@@ -301,7 +301,7 @@ header.static-nav .nav-bar {
     top: auto;
     left: auto; }
   .service.branding .clip-text {
-    width: 500px; }
+    max-width: 500px; }
   .service.branding h2 {
     margin-bottom: 0; }
   .service.branding .service-content {
@@ -333,6 +333,8 @@ header.static-nav .nav-bar {
   .home-contact h2 {
     text-align: center;
     margin: 0; }
+  .home-contact .fa {
+    display: none; }
   .home-contact form p {
     display: flex;
     display: -webkit-flex;
@@ -866,7 +868,12 @@ aside {
       padding-left: 0;
       margin-left: 30px; }
   .home-contact form p {
-    width: 72%; } }
+    width: 72%; }
+  .home-contact ul.socials .divider, .home-contact ul.socials .social-text {
+    display: none; }
+  .home-contact ul.socials .fa {
+    display: block;
+    font-size: 20px; } }
 
 @media (max-width: 420px) {
   h2 {
@@ -889,6 +896,13 @@ aside {
     font-size: 8px;
     letter-spacing: 1px;
     padding-left: 1px; }
+  .service.branding {
+    background-position: -75px bottom; }
+    .service.branding .service-wrapper {
+      right: 0;
+      left: 0;
+      width: 95%;
+      bottom: 85px; }
   .about h2 {
     width: 60%; }
   .about p {
