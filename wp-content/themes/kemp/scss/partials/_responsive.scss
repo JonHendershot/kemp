@@ -27,10 +27,23 @@
 		padding: 10px 0 40px;
 	}
 	
-	.service.videography .clip-text {
-		-webkit-text-fill-color: $white;
-		background: $black;
-	    color: $white;
+	.service.photography {
+		.service-wrapper {
+			background-color: $white;
+		}
+	}
+	
+	.service.videography {
+		
+		.service-wrapper {
+			background-color: $black;
+	
+			.clip-text {
+				-webkit-text-fill-color: $white;
+				background: $black;
+			    color: $white;
+			}
+		}
 	}
 	.service.branding {
 		height: 100vh;

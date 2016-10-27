@@ -809,10 +809,14 @@ aside {
       margin: -1px auto; }
   .service .clip-text.service-content {
     padding: 10px 0 40px; }
-  .service.videography .clip-text {
-    -webkit-text-fill-color: #dedede;
-    background: #000;
-    color: #dedede; }
+  .service.photography .service-wrapper {
+    background-color: #dedede; }
+  .service.videography .service-wrapper {
+    background-color: #000; }
+    .service.videography .service-wrapper .clip-text {
+      -webkit-text-fill-color: #dedede;
+      background: #000;
+      color: #dedede; }
   .service.branding {
     height: 100vh; }
     .service.branding .clip-text {
