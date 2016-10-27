@@ -795,6 +795,7 @@ aside {
     -webkit-text-fill-color: #000;
     -webkit-background-clip: inherit;
     background: #dedede;
+    background-color: #dedede;
     background-image: none !important;
     background-position: top;
     background-attachment: fixed;
