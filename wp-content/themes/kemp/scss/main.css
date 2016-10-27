@@ -886,9 +886,9 @@ aside {
     text-align: left;
     margin-left: 30px; }
   .service div.service-content {
-    font-size: 9px;
-    letter-spacing: 2px;
-    padding-left: 2px; }
+    font-size: 8px;
+    letter-spacing: 1px;
+    padding-left: 1px; }
   .about h2 {
     width: 60%; }
   .about p {
