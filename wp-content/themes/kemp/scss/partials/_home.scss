@@ -201,6 +201,7 @@
 					padding: 10px;
 					background-color: transparent;
 					border: 1px solid $black;
+					
 				}
 				input, textarea {
 					text-transform: uppercase;
@@ -208,6 +209,7 @@
 					color: $black;
 					font-weight: 400;
 					letter-spacing: 3px;
+					border-radius: 0;
 				}
 				input:focus {
 					padding: 6px 10px;
