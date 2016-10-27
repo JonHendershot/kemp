@@ -27,7 +27,8 @@ h1, h2, h3, h4, h5, h6 {
 h2 {
   letter-spacing: 8px;
   font-size: 40px;
-  font-weight: 400; }
+  font-weight: 400;
+  padding-left: 8px; }
 
 p, div, span, input, textarea, button {
   font-family: "Maven Pro", sans-serif; }
@@ -279,7 +280,8 @@ header.static-nav .nav-bar {
     font-weight: 500;
     font-size: 13px;
     letter-spacing: 4px;
-    width: 700px;
+    width: 95%;
+    max-width: 700px;
     margin: 25px auto 0;
     line-height: 2em; }
 
@@ -325,6 +327,9 @@ header.static-nav .nav-bar {
   background-size: cover;
   background-position: center bottom;
   background-repeat: no-repeat; }
+  .home-contact .wrapper {
+    width: 100%;
+    overflow: hidden; }
   .home-contact h2 {
     text-align: center;
     margin: 0; }
@@ -839,5 +844,40 @@ aside {
       font-size: 65px;
       margin: 0;
       padding-top: 75px; }
+  .about {
+    height: 100vh;
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    align-items: center;
+    -webkit-align-items: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+    padding: 0; }
+    .about h2 {
+      font-size: 42px;
+      text-align: left;
+      padding-left: 0;
+      margin-left: 30px; }
   .home-contact form p {
     width: 72%; } }
+
+@media (max-width: 420px) {
+  h2 {
+    font-size: 25px; }
+  .home-header h1 {
+    font-size: 38px; }
+  .home-header p {
+    font-size: 12px;
+    letter-spacing: 8px;
+    padding-left: 8px;
+    margin-top: -7px; }
+  .about h2 {
+    width: 60%; }
+  .about p {
+    font-size: 11px;
+    letter-spacing: 3px;
+    padding-left: 3px; }
+  .home-contact form p {
+    width: 95%; } }

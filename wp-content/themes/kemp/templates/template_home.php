@@ -22,8 +22,10 @@ $contact_img = get_field('contact_background')['url'];
 </section>
 
 <section class="about color-trigger" data-color-key="white">
-	<h2><?php echo $about_title; ?></h2>
-	<p><?php echo $about_content; ?></p>
+	<div class="wrapper">
+		<h2><?php echo $about_title; ?></h2>
+		<p><?php echo $about_content; ?></p>
+	</div>
 </section>
 
 <section class="services">

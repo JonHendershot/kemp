@@ -103,7 +103,8 @@
 		font-weight: 500;
 		font-size: 13px;
 		letter-spacing: 4px;
-		width: 700px;
+		width: 95%;
+		max-width: 700px;
 		margin: 25px auto 0 ;
 		line-height: 2em;
 	}
@@ -160,6 +161,10 @@
 	background-position: center bottom;
 	background-repeat: no-repeat;
 	
+	.wrapper {
+		width: 100%;
+		overflow: hidden;
+	}
 	h2 {
 		text-align: center;
 		margin: 0;
