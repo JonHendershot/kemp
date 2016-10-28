@@ -115,6 +115,9 @@ header.static-nav {
 		position: relative;
 		background-color: $black;
 	}
+	.nav-bar.nav-black {
+		display: none;
+	}
 }
 .menu-scope {
 	width: 100%;

@@ -1,0 +1,62 @@
+.portfolio-container {
+	@include calc(width, "100% - 60px");
+	margin: 30px auto;
+
+	.portfolio {
+		.grid-item {
+			cursor: pointer;
+			.grid-content {
+				height: 0;
+				padding-bottom: 56.25%;
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: center center;
+				position: relative;
+				
+				.wrapper {
+					opacity: 0;
+					@include transition(0.3s,all,ease-in-out);
+					.grid-overlay {
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 100%;
+						height: 100%;
+						background-color: $black;
+						opacity: 0.76;
+					}
+					.grid-text {
+						position: absolute;
+						font-family: $body_font;
+						font-size: 20px;
+						color: $white;
+						opacity: 1;
+						text-align: center;
+						height: 100%;
+						width: 100%;
+						@include flexbox(center,center);
+						.content-wrapper {
+							width: 100%;					
+							h2 {
+								font-family: $body_font;
+								font-size: 20px;
+								color: $white;
+								opacity: 1;
+								text-align: center;
+								letter-spacing: 2px;
+								padding-left: 2px;
+								max-width: 95%;
+								margin: 0 auto;
+							}
+						}
+					}
+				}
+			}
+		}
+		.grid-item:hover {
+			.wrapper {
+				opacity: 1;
+			}
+		}
+	}
+}

@@ -179,6 +179,9 @@ header.static-nav .nav-bar {
   position: relative;
   background-color: #000; }
 
+header.static-nav .nav-bar.nav-black {
+  display: none; }
+
 .menu-scope {
   width: 100%;
   height: 55px;
@@ -785,6 +788,121 @@ aside {
       -o-transition: 0.3s all ease-in-out; }
     aside .search-container input[type="submit"]:hover {
       color: #000; }
+
+/*************************************
+  - - - - - - GRIDLOCK - - - - - - - -
+**************************************/
+.gridlock-container {
+  width: -o-calc(100% - 0px);
+  width: -moz-calc(100% - 0px);
+  width: -webkit-calc(100% - 0px);
+  width: calc(100% - 0px);
+  display: flex;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  justify-content: space-between;
+  align-items: center;
+  -webkit-justify-content: space-between;
+  -webkit-align-items: center;
+  flex-wrap: wrap;
+  margin-top: -o-calc(0px  * 0.5);
+  margin-top: -moz-calc(0px  * 0.5);
+  margin-top: -webkit-calc(0px  * 0.5);
+  margin-top: calc(0px  * 0.5);
+  margin-bottom: -o-calc(0px  * 0.5);
+  margin-bottom: -moz-calc(0px  * 0.5);
+  margin-bottom: -webkit-calc(0px  * 0.5);
+  margin-bottom: calc(0px  * 0.5);
+  margin-left: auto;
+  margin-right: auto; }
+  .gridlock-container .grid-item {
+    width: -o-calc(33.333% - 0px);
+    width: -moz-calc(33.333% - 0px);
+    width: -webkit-calc(33.333% - 0px);
+    width: calc(33.333% - 0px);
+    margin: -o-calc(0px  * 0.5);
+    margin: -moz-calc(0px  * 0.5);
+    margin: -webkit-calc(0px  * 0.5);
+    margin: calc(0px  * 0.5); }
+  .gridlock-container .grid-item:nth-child(4n+1) {
+    background-color: #0f1626; }
+  .gridlock-container .grid-item:nth-child(4n+2) {
+    background-color: #ab987a; }
+  .gridlock-container .grid-item:nth-child(4n+3) {
+    background-color: #ff533d; }
+  .gridlock-container .grid-item:nth-child(4n+4) {
+    background-color: #f5f5f5; }
+  .gridlock-container .grid-item.alt:nth-child(5n+4), .gridlock-container .grid-item.alt:nth-child(5n+5), .gridlock-container .grid-item.alt-inv:nth-child(5n+1), .gridlock-container .grid-item.alt-inv:nth-child(5n+2), .gridlock-container .grid-item.anom-1:nth-child(10n+10), .gridlock-container .grid-item.anom-1:nth-child(10n+11), .gridlock-container .grid-item.r-2:last-child, .gridlock-container .grid-item.r-2:nth-last-child(2), .gridlock-container .grid-item.r-1:last-child, .gridlock-container .grid-item.r-1:nth-last-child(2), .gridlock-container .grid-item.r-1:nth-child(-n+2) {
+    width: -o-calc(50% - 0px);
+    width: -moz-calc(50% - 0px);
+    width: -webkit-calc(50% - 0px);
+    width: calc(50% - 0px); }
+
+/*************************************
+  - - - - - - PORTFOLIO - - - - - - - -
+**************************************/
+.portfolio-container {
+  width: -o-calc(100% - 60px);
+  width: -moz-calc(100% - 60px);
+  width: -webkit-calc(100% - 60px);
+  width: calc(100% - 60px);
+  margin: 30px auto; }
+  .portfolio-container .portfolio .grid-item {
+    cursor: pointer; }
+    .portfolio-container .portfolio .grid-item .grid-content {
+      height: 0;
+      padding-bottom: 56.25%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      position: relative; }
+      .portfolio-container .portfolio .grid-item .grid-content .wrapper {
+        opacity: 0;
+        transition: 0.3s all ease-in-out;
+        -webkit-transition: 0.3s all ease-in-out;
+        -moz-transition: 0.3s all ease-in-out;
+        -ms-transition: 0.3s all ease-in-out;
+        -o-transition: 0.3s all ease-in-out; }
+        .portfolio-container .portfolio .grid-item .grid-content .wrapper .grid-overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: #000;
+          opacity: 0.76; }
+        .portfolio-container .portfolio .grid-item .grid-content .wrapper .grid-text {
+          position: absolute;
+          font-family: "Maven Pro", sans-serif;
+          font-size: 20px;
+          color: #dedede;
+          opacity: 1;
+          text-align: center;
+          height: 100%;
+          width: 100%;
+          display: flex;
+          display: -webkit-flex;
+          display: -moz-flex;
+          display: -ms-flex;
+          align-items: center;
+          -webkit-align-items: center;
+          justify-content: center;
+          -webkit-justify-content: center; }
+          .portfolio-container .portfolio .grid-item .grid-content .wrapper .grid-text .content-wrapper {
+            width: 100%; }
+            .portfolio-container .portfolio .grid-item .grid-content .wrapper .grid-text .content-wrapper h2 {
+              font-family: "Maven Pro", sans-serif;
+              font-size: 20px;
+              color: #dedede;
+              opacity: 1;
+              text-align: center;
+              letter-spacing: 2px;
+              padding-left: 2px;
+              max-width: 95%;
+              margin: 0 auto; }
+  .portfolio-container .portfolio .grid-item:hover .wrapper {
+    opacity: 1; }
 
 /*************************************
   - - - - - - RESPONSIVE - - - - - - - 
