@@ -65,6 +65,7 @@
 	}
 	
 	// Begin Loop
+	$ii = 1;
 	if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); 
 		
 		
@@ -73,7 +74,7 @@
 	$image_large = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
 	
 	?>
-		<div class="grid-item <?php echo $display_class; ?>" data-url="<?php echo $image_large[0]; ?>" data-title="<?php echo get_the_title(); ?>">
+		<div class="grid-item <?php echo "$display_class item-$ii"; ?> lightbox-trigger photo" data-light='{"url": "<?php echo $image_large[0]; ?>", "title" : "<?php echo get_the_title(); ?>", "subtitle" : "<?php echo $subtitle; ?>", "item_number": "<?php echo $ii; ?>" }'>
 			<div class="grid-content" style="background-image: url(<?php echo $thumb[0]; ?>);">
 				<div class="wrapper">
 					<div class="grid-overlay"></div>
@@ -87,4 +88,4 @@
 			</div>
 		</div>	 
 	
-	<?php endwhile; wp_reset_postdata(); endif; ?> <!-- end loop -->
+	<?php $ii++; endwhile; wp_reset_postdata(); endif; ?> <!-- end loop -->

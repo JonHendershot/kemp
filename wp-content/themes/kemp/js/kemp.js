@@ -114,3 +114,73 @@
 
 	}
 }(jQuery));
+(function lightbox($){
+	$('.grid-item.lightbox-trigger').click(function(){
+		
+		var item = $(this);
+		
+		if(item.hasClass('photo')){ // image lightbox
+			
+			var itemInfo = item.data('light'),
+				src = itemInfo.url,
+				title = itemInfo.title,
+				subtitle = itemInfo.subtitle,
+				itemNumber = parseInt(itemInfo.item_number),
+				nextItem = itemNumber + 1,
+				prevItem = itemNumber - 1;
+		
+				$('.next-arrow').attr('data-item',nextItem);
+				$('.prev-arrow').attr('data-item',prevItem);
+				$('.lightbox-img').attr('src',src);
+				$('.lightbox').addClass('visible');
+			
+		} else{ // video iframe lightbox
+			var	srcPrep = '//www.youtube.com/embed/',
+				itemData = item.attr('data-embed'),
+				src = itemData.split('=')[1],
+				srcAppend = '?autoplay=1&showinfo=0',
+				frameSrc = srcPrep + src + srcAppend,
+				title = item.attr('data-title');	
+
+			$('.lightbox iframe').attr('src', frameSrc);
+			$('.lightbox').addClass('visible');	
+			document.getElementsByClassName("box-title")[0].innerHTML = title;
+		}
+		
+	});
+	$('.lightbox-content .arrow').click(function(){
+		var itemID = $(this).attr('data-item'),
+			nextItem = $('.grid-item.item-' + itemID),
+			firstItem = $('.grid-item.item-1'),
+			lastItemID = $('.grid-item').last().data('light').item_number,
+			lastItem = $('.grid-item.item-' + lastItemID);
+
+		if(nextItem.length){
+			var itemInfo = nextItem.data('light');
+		} else if(itemID > 1) {
+			var itemInfo = firstItem.data('light');
+		} else if(itemID == 1 || itemID == 0) {
+			var itemInfo = lastItem.data('light');
+		}
+		var src = itemInfo.url,
+			title = itemInfo.title,
+			subtitle = itemInfo.subtitle,
+			itemNumber = parseInt(itemInfo.item_number),
+			nextItem = itemNumber + 1,
+			prevItem = itemNumber - 1;
+		$('.next-arrow').attr('data-item',nextItem);
+		$('.prev-arrow').attr('data-item',prevItem);
+		$('.lightbox-img').attr('src',src);
+		$('.lightbox').addClass('visible');
+	});
+	
+	/*
+$('.lightbox').click(function(){
+		if( ! $(this).hasClass('arrow') ){
+			$('.lightbox').removeClass('visible');
+			$('.lightbox iframe, .lightbox-img').attr('src',''); // stop iframe playback on close
+		}
+		
+	});
+*/
+}(jQuery));
