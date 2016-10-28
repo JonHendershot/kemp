@@ -69,8 +69,8 @@
 		
 		
 	$subtitle = get_field('photo_information');	
-	$thumb = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
-	$image_large = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' );
+	$thumb = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' );
+	$image_large = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
 	
 	?>
 		<div class="grid-item <?php echo $display_class; ?>" data-url="<?php echo $image_large[0]; ?>" data-title="<?php echo get_the_title(); ?>">
