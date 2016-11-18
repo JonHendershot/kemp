@@ -1,7 +1,117 @@
-.portfolio-container {
-	@include calc(width, "100% - 60px");
-	margin: 30px auto;
+	.toolbox {
+		top: 139px;
+		position: fixed;
+		left: 0;
+		z-index: 999;
+		@include ease(600ms);
+	}
+	.tool-container {
+		@include flexbox(center,space-between);
+		width: 30px;
+		
+		i {
+			width: 30px;
+			height: 30px;
+			@include flexbox(center,center);
+			background-color: #fff;;
+			z-index: 99999;
+			position: absolute;
+			top: 0;
+			left: 0;
+			cursor: pointer;
+			color: $black;
+			@include transition(0.4s,all,ease-in-out);
+		}
+		i.fa-search {
+			font-size: 14px;
+		}
+		
+		.tool {
+			background-color: $black;
+			height: 30px;
+			padding: 0 5px;
+			@include translate(-100%,0,0);
+			@include easeout(400ms);
+			@include flexbox(center,space-between);
 
+			form {
+				@include flexbox(center,center);
+				margin-bottom: 2.5px;
+				input[type="text"]{
+					background-color: transparent;
+				    border-bottom: 0.5px solid rgba(222,222,222,0.8);
+				    border-top: none;
+				    border-left: none;
+				    border-right: none;
+				    font-size: 12px;
+				    margin-left: 5px;
+				    color: $white;
+				    padding: 0 4px 0 0;
+				   
+				}
+				input[type="text"]:focus {
+					outline: none;
+				}
+				input[type="submit"]{
+					background-color: $white;
+					border: none;
+					font-size: 10px;
+					line-height: 12px;
+					text-transform: uppercase;
+					font-weight: 600;
+					padding: 1px 8px;
+					margin-right: 5px;
+					letter-spacing: 1px;
+				}
+	
+			}
+		}
+		
+		ul.tool {
+			margin: 0;
+			list-style: none;
+		    color: $white;
+			
+			li {
+				font-size: 12px;
+				margin: 0 5px;
+				
+				a {
+					color: $white;
+					text-decoration: none;
+					@include transition(0.3s,all,ease-in-out);
+				}
+				a:visited {
+					color: $white;
+					text-decoration: none;
+				}
+				a:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+	.tool-container:nth-child(2){
+		display: none;
+		i {
+			top: 30px;
+		}
+	}
+	.tool-container:hover {
+		i {
+			color: $black;
+		}
+		.tool {
+			@include translate(30px,0,0);
+		}
+	}
+
+.portfolio-container {
+	@include calc(width, "100% -" 60 - (2*$gutter));
+	margin: 30px auto;
+	position: relative;
+
+	
 	.portfolio {
 		.grid-item {
 			cursor: pointer;
@@ -26,27 +136,36 @@
 						opacity: 0.76;
 					}
 					.grid-text {
+						
 						position: absolute;
 						font-family: $body_font;
 						font-size: 20px;
 						color: $white;
 						opacity: 1;
-						text-align: center;
+						text-align: left;
 						height: 100%;
 						width: 100%;
-						@include flexbox(center,center);
+						@include flexbox(flex-end,center);
 						.content-wrapper {
-							width: 100%;					
+							$gt_bm : 15px;
+							@include calc(width, "100% -" (2*$gt_bm));	
+							margin-bottom: $gt_bm;				
 							h2 {
 								font-family: $body_font;
-								font-size: 20px;
+								font-size: 16px;
 								color: $white;
 								opacity: 1;
-								text-align: center;
-								letter-spacing: 2px;
-								padding-left: 2px;
-								max-width: 95%;
+								text-align: left;
+								letter-spacing: 1px;
+								padding-left: 0px;
 								margin: 0 auto;
+								font-weight: 600;
+							}
+							p {
+								margin: 0;
+								font-size: 11px;
+								font-weight: 600;
+// 								padding-left: 3px;
 							}
 						}
 					}

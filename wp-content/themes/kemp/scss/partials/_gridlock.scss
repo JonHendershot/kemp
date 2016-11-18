@@ -1,5 +1,5 @@
 // Variables
-$gutter : 0px;
+$gutter : 10px;
 // Spacing
 .gridlock-container{
 	@include calc(width,"100% -" $gutter);

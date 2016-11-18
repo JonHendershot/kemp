@@ -10,6 +10,21 @@ header {
 				background-color: $white;
 			}
 		}
+		.menu-trigger.open {
+			.line-2,.line-4 {
+				outline-color: $white;
+
+			}
+		}
+	}
+	.nav-bar.nav-black {
+		.menu-trigger.open {
+			.line-2,.line-4 {
+				outline-color: $white;
+				background-color: $white;
+
+			}
+		}
 	}
 	.nav-bar {
 		@include calc(width,"100% - 60px");
@@ -56,7 +71,7 @@ header {
 			font-size: 20px;
 			@include easeout(600ms);
 		}
-		.menu-lines {
+		.lines-container {
 			@include flexbox(center,space-between);
 			flex-direction: column;
 			position: absolute;
@@ -65,14 +80,16 @@ header {
 			bottom: 0;
 			right: 0;
 			margin: auto;
-			width: 100%;
+			width: 40%;
 			height: 15px;
+			overflow: hidden;
 			.mline {
 				height: 1px;
-				width: 40%;
+				width: 100%;
 				background-color: $white;
 				@include easeout(600ms);
 				@include translate(200%,0,0);
+				outline: 1px solid transparent;
 
 
 			}
@@ -84,17 +101,45 @@ header {
 			}
 			.line-3 {
 				transition-delay: 100ms;
+			}			
+			.line-4 {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				width: 100%;
+				margin: auto;
+				transition-delay: 60ms;
+
 			}
 		}
 		
 	}
-	.menu-trigger:hover {
+	.menu-trigger.prep {
 		.letter {
 			@include translate(-150%,0,0);
 		}
 		.mline {
-			width: 40%;
 			@include translate(0,0,0);
+		}
+	}
+	.menu-trigger.open {
+		.line-1 {
+			@include translate(100%,0,0);
+		}
+		.line-3 {
+			@include translate(-100%,0,0);
+		}
+		.line-2 {
+			@include rotate(45deg);
+
+		}
+		.line-4 {
+			@include rotate(-225deg);
+		}
+		.letter {
+			@include translate(-150%,0,0);
 		}
 	}
 	.nav-bar.nav-black { // handle colors
@@ -111,12 +156,71 @@ header {
 	}
 }
 header.static-nav {
+	position: relative;
+	z-index: 9;
 	.nav-bar {
 		position: relative;
 		background-color: $black;
 	}
 	.nav-bar.nav-black {
 		display: none;
+		
+	}
+}
+	
+.menu-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    @include max-content(width);
+    margin: auto;
+    z-index: 9;
+    background-color: $black;
+    height: 100%;
+    @include flexbox(center,center);
+    padding: 0 75px;
+//     @include translate(00%,0,0);
+    @include ease(600ms);
+    ul {
+	    padding: 0;
+	    margin: 0;
+	    @include flexbox(flex-start,space-between);
+	    list-style: none;
+	    flex-direction: column;
+	    
+	    li {
+		    margin: 10px 0;
+		    @include translate(40px,0,0);
+		    @include easeout(1000ms);
+		    a {
+			    text-transform: uppercase;
+			    text-decoration: none;
+			    color: $white;
+			    font-weight: 600;
+			    letter-spacing: 2px;
+			    font-size: 22px;
+			    @include easeout(1000ms);
+			    		    opacity: 0;
+
+		    }
+		    a:hover {
+			    text-decoration: underline;
+		    }
+	    }
+	    
+	    @for $i from 1 through 20 {
+		    li:nth-child(#{$i}){
+			    transition-delay: ($i - 1)* ( (1 - 0.075*$i) * 80ms);
+		    }
+	    }
+	    
+    }
+}
+.menu-container.visible {
+// 	@include translate(0,0,0);
+	li {
+		@include translate(0,0,0);	
+		a{opacity: 1;}
 	}
 }
 .menu-scope {

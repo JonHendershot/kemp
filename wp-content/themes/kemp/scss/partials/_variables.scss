@@ -57,6 +57,13 @@ $max-width : 1300px;
      -o-transition: all $time cubic-bezier(0.375, 0.005, 0.000, 1.000); 
         transition: all $time cubic-bezier(0.375, 0.005, 0.000, 1.000); /* custom */
 }
+@mixin ease($time){
+		-webkit-transition: all $time cubic-bezier(0.805, 0, 0.215, 1.000); /* older webkit */
+	-webkit-transition: all $time cubic-bezier(0.805, 0, 0.215, 1.000); 
+   -moz-transition: all $time cubic-bezier(0.805, 0, 0.215, 1.000); 
+     -o-transition: all $time cubic-bezier(0.805, 0, 0.215, 1.000); 
+        transition: all $time cubic-bezier(0.805, 0, 0.215, 1.000); /* custom */
+}
 @mixin calc($property, $expression) { 
   #{$property}: -o-calc(#{$expression}); 
   #{$property}: -moz-calc(#{$expression}); 
@@ -66,4 +73,10 @@ $max-width : 1300px;
 @mixin center-spacing($distance) {
 	letter-spacing: $distance;
 	padding-left: $distance;
+}
+@mixin max-content($mproperty) {
+	#{$mproperty}: max-content;
+	#{$mproperty}: -webkit-max-content;
+	#{$mproperty}: -moz-max-content;
+	#{$mproperty}: -moz-fit-content;
 }

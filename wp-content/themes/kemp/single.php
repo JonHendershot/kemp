@@ -8,6 +8,7 @@
  */
 
 get_header(); ?>
+
 	<div class="single-page-container">
 		<div id="primary" class="content-area single-wrapper">
 			<main id="main" class="site-main" role="main">
@@ -33,9 +34,6 @@ get_header(); ?>
 -->
 			</main><!-- #main -->
 		</div><!-- #primary -->
-
-<?php
-get_sidebar();?>
 	</div> <!-- #single-page-container -->
 <?php 
 get_footer(); ?>

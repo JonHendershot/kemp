@@ -125,6 +125,11 @@
 		letter-spacing: 5px;
 		padding-left: 5px !important;
 	}
+	.menu-container {
+		padding: 0;
+		width: 100vw;
+		padding-top: 0 !important;
+	}
 	
 	//Header
 	.home-header {
@@ -186,6 +191,11 @@
 				width: 95%;
 			}
 		}
+	}
+	
+	// Gridlock 
+	.grid-item {
+		width: 100% !important;
 	}
 }
 @media (max-width: 375px){

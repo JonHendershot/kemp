@@ -114,7 +114,36 @@
 
 	}
 }(jQuery));
+(function menuTrigger($){
+
+	$('.menu-trigger').click(function(){
+		var distance = $('.menu-container').outerWidth();
+		if( ! $(this).hasClass('open') ){
+			$('.menu-trigger').addClass('open');
+			$('.menu-container').addClass('visible');
+			$('.site-content,.toolbox').css({'-webkit-transform':'translate3d(-' + distance + 'px,0,0)'});
+			$('body').addClass('frozen');
+
+		} else {
+			$('.menu-trigger').removeClass('open');
+			$('.menu-container').removeClass('visible');
+			$('.site-content,.toolbox').css({'-webkit-transform':'none'});
+			$('body').removeClass('frozen');
+
+
+		}
+	});
+	
+	
+	$('.menu-trigger').hover(function(){
+		$('.menu-trigger').addClass('prep');
+	}, function(){
+		$('.menu-trigger').removeClass('prep');
+	});
+	
+}(jQuery));
 (function lightbox($){
+	windowHeight = $(window).height();
 	$('.grid-item.lightbox-trigger').click(function(){
 		
 		var item = $(this);
@@ -133,6 +162,9 @@
 				$('.prev-arrow').attr('data-item',prevItem);
 				$('.lightbox-img').attr('src',src);
 				$('.lightbox').addClass('visible');
+				$('.lightbox .image-meta h2').text(title);
+				$('.lightbox .image-meta p').text(subtitle);
+	
 			
 		} else{ // video iframe lightbox
 			var	srcPrep = '//www.youtube.com/embed/',
@@ -172,8 +204,16 @@
 		$('.prev-arrow').attr('data-item',prevItem);
 		$('.lightbox-img').attr('src',src);
 		$('.lightbox').addClass('visible');
+		$('.lightbox .image-meta h2').text(title);
+		$('.lightbox .image-meta p').text(subtitle);
+				
 	});
 	
+	$('.close-lb').click(function(){
+		$('.lightbox').removeClass('visible');
+		$('.lightbox-img').attr('src',''); // remove image from image container
+		$('.lightbox .image-meta h2, .lightbox .image-meta p').text(''); // remove metadata
+	});
 	/*
 $('.lightbox').click(function(){
 		if( ! $(this).hasClass('arrow') ){

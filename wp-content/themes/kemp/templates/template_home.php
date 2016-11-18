@@ -35,49 +35,11 @@ $contact_img = get_field('contact_background')['url'];
 </section>
 
 <section class="home-contact color-trigger" style="background-image:url(<?php echo $contact_img; ?>);" data-color-key="black">
-	<div class="wrapper">
-		<h2>Contact</h2>
-		<ul class="socials">
-			<li class="social fb">
-				<a href="http://www.facebook.com/jonathanhkemp">
-					<span class="social-text">facebook</span>
-					<i class="fa fa-facebook"></i>
-				</a>
-			</li>
-			<li class="divider">
-				|
-			</li>
-			<li class="social tw">
-				<a href="http://www.twitter.com/jonathanhkemp">
-					<span class="social-text">twitter</span>
-					<i class="fa fa-twitter"></i>
-				</a>
-			</li>
-			<li class="divider">
-				|
-			</li>
-			<li class="social insta">
-				<a href="http://www.instagram.com/jonathankemp">
-					<span class="social-text">instagram</span>
-					<i class="fa fa-instagram"></i>
-				</a>
-				
-			</li>
-			<li class="divider">
-				|
-			</li>
-			<li class="social linked">
-				<a href="http://www.linked.com/jonathanhkemp">
-					<span class="social-text">linkedin</span>
-					<i class="fa fa-linkedin"></i>
-				</a>
-			</li>
-		</ul>
+		
 		<?php 
 			wp_reset_query();
 			get_template_part('template-parts/module-contact');
 		?>
-	</div>
 </section>
 
 <?php get_footer();

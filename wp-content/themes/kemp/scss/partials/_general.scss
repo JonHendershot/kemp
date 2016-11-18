@@ -2,6 +2,17 @@
 	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
 }
+body.frozen {
+	overflow: hidden;
+}
+body:not(.home){
+	.menu-container {
+		padding-top: 52px;
+	}
+}
+html {
+	background-color: $black;
+}
 h1, h2, h3, h4, h5, h6 {
 	font-family: $header_font;
 	text-transform: uppercase;
@@ -21,4 +32,29 @@ textarea {
 }
 br {
 	display: none;
+}
+.site-content {
+	@include ease(600ms);
+	display: inline-block;
+	width: 100%;
+	background-color: #fff;
+	z-index: 9;
+	position: relative;
+}
+body.home {
+	.site-content {
+		background-color: $black;
+	}
+}
+/*
+.main-content-wrapper.open {
+	@include translate(-600px,0,0);
+}
+*/
+// Hide admin bar!
+#wpadminbar {
+	display: none;
+}
+html[lang="en-US"] {
+	margin-top: 0 !important;
 }

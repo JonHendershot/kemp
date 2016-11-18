@@ -81,10 +81,15 @@ a.back:hover:before {
 
 	.single-wrapper {
 		width: 70%;
-		padding: 50px 50px 50px 100px;
+		padding: 50px 90px;
 		color: $black;
 		font-size: 14px;
 		line-height: 1.7em;
+		
+		img {
+			max-width: 100%;
+			margin: 5px auto;
+		}
 		
 		h2 {
 			font-weight: 700;
@@ -209,7 +214,7 @@ a.back:hover:before {
 	@include flexbox(flex-start, space-around);
 	.content-area {
 		width: 70%;
-		padding: 50px 50px 50px 100px;
+		padding: 50px 50px 50px 30px;
 		color: $black;
 		font-size: 14px;
 		line-height: 1.7em;
@@ -273,7 +278,7 @@ a.back:hover:before {
 aside {
 		width: 30%;
 		background-color: $offwhite;
-		padding: 50px 80px 50px 50px;
+		padding: 50px 30px 50px 50px;
 		
 		h2 {
 			text-transform: uppercase;
@@ -281,6 +286,7 @@ aside {
 			letter-spacing: 3px;
 			font-weight: 600;
 			margin-bottom: 35px;
+			padding-left: 0;
 		}
 		section {
 			margin-bottom: 70px;

@@ -1,0 +1,43 @@
+.about-container {
+	margin: 30px;
+
+.about-wrapper {
+	
+	@include flexbox(center,space-between);
+	
+
+	.headshot {
+		width: 50%;
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+	.content {
+		width: 50%;
+		.wrapper {
+			@include calc(width,"100% - 30px");
+			margin-left: 30px;
+	
+			h2 {
+				margin: 0 auto;
+	
+			}
+			
+			p {
+	
+				text-align: justify;
+				margin: 0 auto;
+			}
+		}
+	}
+	 
+	figure{
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 0;
+	}
+	
+}
+}
