@@ -13,6 +13,7 @@
 	
 	.lightbox-content {
 		@include max-content(width);
+		@include flexbox(center,center);
 		height: 90%;
 		max-width: 95%;
 		margin: 0 auto;
@@ -24,8 +25,10 @@
 			width: auto;
 		}
 		img.wide {
-			width: 100%;
+			width: auto;
 			height: auto;
+			max-height: 100%;
+			max-width: 100%;
 		}
 		.close-lb {
 			position: absolute;

@@ -1320,6 +1320,14 @@ ul.socials {
     width: -webkit-max-content;
     width: -moz-max-content;
     width: -moz-fit-content;
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    align-items: center;
+    -webkit-align-items: center;
+    justify-content: center;
+    -webkit-justify-content: center;
     height: 90%;
     max-width: 95%;
     margin: 0 auto;
@@ -1329,8 +1337,10 @@ ul.socials {
       height: 100%;
       width: auto; }
     .lightbox .lightbox-content img.wide {
-      width: 100%;
-      height: auto; }
+      width: auto;
+      height: auto;
+      max-height: 100%;
+      max-width: 100%; }
     .lightbox .lightbox-content .close-lb {
       position: absolute;
       top: 0;
