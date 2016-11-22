@@ -230,11 +230,17 @@
 		preload(nextUrl,prevUrl);
 				
 	});
-	
 	$('.close-lb').click(function(){
 		$('.lightbox').removeClass('visible');
 		$('.lightbox-img').attr('src',''); // remove image from image container
 		$('.lightbox .image-meta h2, .lightbox .image-meta p').text(''); // remove metadata
+	});
+	$('.lightbox-content').click(function(){
+		if($(this).hasClass('hidecontrols')){
+			$(this).removeClass('hidecontrols');
+		}else {
+			$(this).addClass('hidecontrols');
+		}
 	});
 }(jQuery));
 (function toolBox($){
