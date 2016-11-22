@@ -218,10 +218,10 @@ header .menu-trigger {
       transition-delay: 60ms; }
 
 header .menu-trigger.prep .letter {
-  -webkit-transform: translate3d(-150%, 0, 0);
-  -moz-transform: translate3d(-150%, 0, 0);
-  -ms-transform: translate3d(-150%, 0, 0);
-  transform: translate3d(-150%, 0, 0); }
+  -webkit-transform: translate3d(-160%, 0, 0);
+  -moz-transform: translate3d(-160%, 0, 0);
+  -ms-transform: translate3d(-160%, 0, 0);
+  transform: translate3d(-160%, 0, 0); }
 
 header .menu-trigger.prep .mline {
   -webkit-transform: translate3d(0, 0, 0);
