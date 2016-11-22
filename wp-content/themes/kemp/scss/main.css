@@ -1331,10 +1331,9 @@ ul.socials {
     .lightbox .lightbox-content .close-lb {
       position: absolute;
       top: 0;
-      left: 0;
+      right: 0;
       color: #dedede;
       padding: 10px 0;
-      width: 100%;
       background-color: transparent;
       -webkit-transition: all 600ms cubic-bezier(0.375, 0.005, 0, 1);
       -moz-transition: all 600ms cubic-bezier(0.375, 0.005, 0, 1);
@@ -1783,7 +1782,13 @@ ul.socials {
     -ms-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0); }
   .lightbox .lightbox-content.hidecontrols .close-lb, .lightbox .lightbox-content.hidecontrols .image-meta, .lightbox .lightbox-content.hidecontrols .arrow {
-    opacity: 0; } }
+    opacity: 0; }
+  .lightbox .arrow {
+    padding: 0 15px; }
+  .lightbox .arrow.prev-arrow {
+    left: 0; }
+  .lightbox .arrow.next-arrow {
+    right: 0; } }
 
 @media (max-width: 420px) {
   h2 {

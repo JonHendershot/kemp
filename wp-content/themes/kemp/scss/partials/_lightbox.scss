@@ -26,10 +26,9 @@
 		.close-lb {
 			position: absolute;
 			top: 0;
-			left: 0;
+			right: 0;
 			color: $white;
 			padding: 10px 0;
-			width: 100%;
 			background-color: rgba(0,0,0,0);
 		    @include easeout(600ms);
 			@include translate(0,-101%,0);
