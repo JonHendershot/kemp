@@ -689,9 +689,9 @@ section:not(.home-header) {
     max-width: 500px; }
   .service.branding h2 {
     margin-bottom: 0;
-    padding-left: 12px; }
+    padding-left: 10px; }
   .service.branding .service-content {
-    margin-top: -5px;
+    margin-top: 5px;
     padding-left: 3px;
     text-align: justify; }
 
