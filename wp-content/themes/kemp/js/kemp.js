@@ -236,11 +236,14 @@
 		$('.lightbox .image-meta h2, .lightbox .image-meta p').text(''); // remove metadata
 	});
 	$('.lightbox-content').click(function(){
-		if($(this).hasClass('hidecontrols')){
-			$(this).removeClass('hidecontrols');
-		}else {
-			$(this).addClass('hidecontrols');
+		if( ! $(this).hasClass('.close-lb') && $(this).hasClass('.image-meta') && $(this).hasClass('.arrow') ){
+			if($(this).hasClass('hidecontrols')){
+				$(this).removeClass('hidecontrols');
+			}else {
+				$(this).addClass('hidecontrols');
+			}
 		}
+		
 	});
 }(jQuery));
 (function toolBox($){
