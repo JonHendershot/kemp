@@ -1,3 +1,42 @@
+// SCROLLER HINT
+.scroll-hint-container {
+		position: fixed;
+		bottom: 25px;
+		left: 0;
+		right: 0;
+		margin: auto;
+		clip: rect(0,auto,10px,0);
+		z-index: 9;
+
+		.wrapper {
+			@include flexbox(center,space-between);
+			@include calc(width,"100% - 60px");
+			margin: 0 auto;
+		}
+		p {
+			text-transform: uppercase;
+			font-family: $body_font;
+			font-size: 10px;
+			font-weight: 800;
+			letter-spacing: 6px;
+			opacity: 0.8;
+			padding-left: 4px;
+			margin: 0;
+			cursor: pointer;
+			color: $tan;
+		}
+		p.menu-trigger:hover {
+			opacity: 1;
+		}
+		p:not(.menu-trigger){
+			opacity: 0.5;
+		}
+	}
+	
+section:not(.home-header){
+	position: relative;
+	z-index: 99;
+}
 // HEADER
 .home-header {
 	padding: 60px 0 110vh;
@@ -5,6 +44,7 @@
 	background-size: cover;
 	background-position: center bottom;
 	background-repeat: no-repeat;
+	position: relative;
 	
 	h1, p {
 		color: $tan;
@@ -21,7 +61,55 @@
 		margin-top: -10px;
 		font-family: $header_font;
 	}
+	
+	.chev-container {
+		position: absolute;
+		top: 0;
+		right: 15px;
+		bottom: 0;
+		height: 100vh;
+		margin-top: 30px;
+		@include flexbox(center,center);
+	}
+	.chev-wrapper {
+		cursor: pointer;
+		height: 20px;
+		width: 20px;
+		@include flexbox(center,center);
+		flex-direction: column;
+		
+		.chev {
+			height: 10px;
+			width: 3px;
+			border-radius: 10px;
+			background-color: $tan;
+			@include ease(400ms);
+		}
+		.chev-1 {
+			margin-bottom: -2px;
+		}
+		.chev-2 {
+			margin-top: -2px;
+		}
+	}
+	.chev-wrapper:hover {
+		.chev-1 {
+			@include rotate(45deg);
+		}
+		.chev-2 {
+			@include rotate(-45deg);
+		}
+	}
+	.chev-wrapper.open {
+		.chev-1 {
+			@include rotate(-45deg);
+		}
+		.chev-2 {
+			@include rotate(45deg);
+		}
+	}
 }
+
 
 // ABOUT
 

@@ -3,8 +3,8 @@
 
 
 	// Settings :: Used to create number of elements and create a ceiling 
-	$category_name = ( isset($_GET['spcn']) ) ? $_GET['spcn'] : '';
-	$category = get_cat_ID( $category_name );
+	$category_name = ( isset($_GET['spcn']) ) ? $_GET['spcn'] : 'published';
+	$category = ( isset($_GET['spcn']) ) ? get_cat_ID( $category_name ) : '-' . get_cat_ID( $category_name );
 	$args = array(
 		'post_type' => 'portfolio',
 		'posts_per_page' => -1,

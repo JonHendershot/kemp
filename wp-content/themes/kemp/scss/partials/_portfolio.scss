@@ -3,7 +3,10 @@
 		position: fixed;
 		left: 0;
 		z-index: 999;
-		@include ease(600ms);
+		@include ease(1000ms);
+	}
+	.toolbox.hide {
+		@include translate(-101%,0,0);
 	}
 	.tool-container {
 		@include flexbox(center,space-between);

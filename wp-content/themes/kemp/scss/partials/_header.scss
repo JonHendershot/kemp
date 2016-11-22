@@ -17,6 +17,9 @@ header {
 			}
 		}
 	}
+	.nav-bar.nav-white.bury {
+		z-index: -1;
+	}
 	.nav-bar.nav-black {
 		.menu-trigger.open {
 			.line-2,.line-4 {
@@ -154,6 +157,20 @@ header {
 			}
 		}
 	}
+	
+	.menu-container {
+		.close-menu {
+			position: absolute !important;
+			top: 30px !important;
+			right: 30px !important;
+			border: none;
+			display: none;
+			color: $white;
+		}
+		.close-menu.showing {
+			display: block;
+		}
+	}
 }
 header.static-nav {
 	position: relative;
@@ -232,4 +249,32 @@ header.static-nav {
     left: 0;
     z-index: -1;
     visibility: hidden;
+}
+
+// TEMP MENU - DELETE THIS 
+body.home {
+	.nav-bar.nav-white { // handle colors
+		clip: rect(0px,auto,auto,0px);		
+		
+		.site-logo, .menu-trigger {
+			border: none;
+			@include easeout(600ms);
+			
+			.letter {
+				color: $white;
+				text-shadow: -3px 0 $black;
+			}
+		}
+		.site-logo {
+			@include translate(-155%,0,0);
+		}
+		.menu-trigger {
+			@include translate(155%,0,0);
+		}
+	}
+	.nav-bar.showing {
+		.site-logo, .menu-trigger {
+			@include translate(0,0,0);
+		}
+	}
 }

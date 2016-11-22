@@ -13,7 +13,7 @@
 <div class="color-trigger service <?php echo strtolower( get_the_title() ); if(! $image[0]){ echo ' noclip'; } ?>" style="background-image: url(<?php echo $image[0]; ?>)" data-color-key="<?php echo $color_key; ?>">
 	<div class="service-wrapper">
 		<h2 class="<?php if($image[0]){ echo "clip-text"; } ?> service-title" <?php if($image[0]){ echo "style='background-image: url(" . $image[0] . ")';"; } ?>> <?php the_title(); ?></h2>
-		<div class="<?php if($image[0]){ echo "clip-text"; } ?> service-content" <?php if($image[0]){ echo "style='background-image: url(" . $image[0] . ")';"; } ?>><?php the_content(); ?></div>
+		<div class="<?php if($image[0]){ echo "clip-text"; } ?> service-content" <?php if($image[0]){ echo "style='background-image: url(" . $image[0] . ")';"; } ?>><?php echo get_the_content(); ?></div>
 	</div>
 </div>
 

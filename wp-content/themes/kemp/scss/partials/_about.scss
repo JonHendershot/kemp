@@ -1,43 +1,70 @@
 .about-container {
 	margin: 30px;
 
-.about-wrapper {
-	
-	@include flexbox(center,space-between);
-	
-
-	.headshot {
-		width: 50%;
-		img {
-			width: 100%;
-			height: auto;
+	.about-wrapper {
+		@include flexbox(center,center);
+		
+		> div { width: 50%; }
+		
+		img { max-width: 100%; }
+		
+		.content {
+			.wrapper {
+				position: relative;
+				@include calc(width,"100% - 60px");
+				margin: 0 auto;
+				h2 {
+					padding-left: 2px;
+					margin: 0 0 6px;
+				}
+				p {
+					text-align: justify;
+					margin: 0;
+					font-size: 15px;
+					line-height: 1.5em;
+				}
+			}
 		}
 	}
-	.content {
-		width: 50%;
+/*
+	.about-wrapper:nth-child(odd){
 		.wrapper {
 			@include calc(width,"100% - 30px");
 			margin-left: 30px;
+		}
+	}
+*/
+	.about-wrapper:nth-child(even){
+		background-color: $black;
+		.wrapper {
+			color: $white;
+		}
+	}
 	
-			h2 {
-				margin: 0 auto;
-	
+	.about-wrapper.testimonials {
+		.wrapper {
+// 			text-align: center;
+			p{
+				text-indent: -5px;
 			}
-			
-			p {
-	
-				text-align: justify;
-				margin: 0 auto;
+			figure {
+				margin: 0;
+			}
+			figure:not(:first-of-type){
+				position: absolute;
+				top: 0;
+				left: 0;
+				opacity: 0;
+			}
+			blockquote {
+				margin: 0;
+			}
+			figcaption {
+				text-align: right;
+			    font-style: italic;
+			    margin-top: 15px;
+			    font-size: 14px;
 			}
 		}
 	}
-	 
-	figure{
-		position: absolute;
-		top: 0;
-		left: 0;
-		opacity: 0;
-	}
-	
-}
 }

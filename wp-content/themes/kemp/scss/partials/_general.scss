@@ -10,7 +10,7 @@ body:not(.home){
 		padding-top: 52px;
 	}
 }
-html {
+body {
 	background-color: $black;
 }
 h1, h2, h3, h4, h5, h6 {
@@ -40,6 +40,7 @@ br {
 	background-color: #fff;
 	z-index: 9;
 	position: relative;
+	@include calc(min-height, "100vh - 104px");
 }
 body.home {
 	.site-content {

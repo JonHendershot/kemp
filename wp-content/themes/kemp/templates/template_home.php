@@ -16,9 +16,26 @@ $contact_img = get_field('contact_background')['url'];
 
 
 ?>
+<div class="scroll-hint-container">
+	<div class="wrapper">
+		<p>scroll</p>
+		<p class="menu-trigger">menu</p>
+		<p>down</p>
+	</div>
+</div>
 <section class="home-header color-trigger" style="background-image:url(<?php echo $feat_img; ?>);" data-color-key="hidden">
 	<h1><?php echo $page_title; ?></h1>
 	<p><?php echo $page_sub_title; ?></p>
+<!--
+	<div class="chev-container">
+		<div class="menu-trigger chev-wrapper">
+			<div class="chev-1 chev">
+			</div>
+			<div class="chev-2 chev">
+			</div>
+		</div>
+	</div>
+-->
 </section>
 
 <section class="about color-trigger" data-color-key="white">

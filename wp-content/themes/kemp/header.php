@@ -23,7 +23,7 @@
 	<?php if( is_front_page() ){echo '<div class="menu-scope"></div>';} ?>
 <div id="page" class="site">
 <header class="<?php if( ! is_front_page() ){ echo 'static-nav';} ?> menu-header">
-			<div class="nav-bar nav-white">
+			<div class="nav-bar nav-white <?php if(is_front_page()){ echo ' bury'; }?>">
 				<a href="<?php echo get_home_url(); ?>">
 					<div class="site-logo">
 						<span class="letter">k</span>
@@ -46,6 +46,11 @@
 				</div>
 			</div>
 			<div class="menu-container">
+				<?php if( is_front_page() ) : ?>
+					<div class="close-menu menu-trigger showing">
+						<i class="fa fa-times"></i>
+					</div>
+				<?php endif; ?>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 			</div>
 		</header>
@@ -53,7 +58,7 @@
 			get_template_part('template-parts/module-lightbox');
 			$categories = get_categories( array('parent'=>2) );
 
-		echo'	<div class="toolbox">
+		echo'	<div class="toolbox hide">
 				<div class="filter tool-container">
 					<i class="fa fa-filter"></i>
 					<ul class="filter-items tool">

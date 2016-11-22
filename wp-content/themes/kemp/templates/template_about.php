@@ -9,7 +9,7 @@
 	$second_img = get_field('testimonial_photo')['url']
 ?>
 <div class="about-container">
-	<div class="about-wrapper">
+	<div class="about-wrapper bio">
 		<div class="headshot">
 			<img src="<?php echo $image[0]; ?>" />
 	<!-- 		<p class="cred">Photo by:</p> -->
@@ -25,10 +25,12 @@
 	</div>
 	<div class="about-wrapper testimonials">
 		<div class="content">
-			<h2>Testimonials</h2>
-			<p>
-				<?php echo $testimonials; ?>
-			</p>
+			<div class="wrapper">
+				<h2>Testimonials</h2>
+				<p>
+					<?php echo $testimonials; ?>
+				</p>
+			</div>
 		</div>
 		<div class="headshot">
 			<img src="<?php echo $second_img; ?>" />
