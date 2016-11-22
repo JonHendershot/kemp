@@ -86,6 +86,13 @@
 			padding-top: 75px;
 		}
 	}
+	header {
+		.menu-trigger {
+			 .letter {
+				 @include translate(-155%,0,0);
+			 }
+		}
+	}
 	
 	// About
 	.about {
