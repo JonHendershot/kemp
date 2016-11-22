@@ -82,7 +82,7 @@
 	
 	?>
 		<div class="grid-item <?php echo "$display_class item-$ii"; ?> lightbox-trigger photo" data-light='{"url": "<?php echo $image_large[0]; ?>", "title" : "<?php echo get_the_title(); ?>", "subtitle" : "<?php echo $subtitle; ?>", "item_number": "<?php echo $ii; ?>" }'>
-			<div class="grid-content <?php echo $framing; ?>" style="background-image: url(<?php echo $thumb[0]; ?>);">
+			<div class="grid-content <?php echo strtolower($framing); ?>" style="background-image: url(<?php echo $thumb[0]; ?>);">
 				<div class="wrapper">
 					<div class="grid-overlay"></div>
 					<div class="grid-text">

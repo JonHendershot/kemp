@@ -1725,11 +1725,11 @@ section.travel-dates {
               margin: 0;
               font-size: 11px;
               font-weight: 600; }
-    .portfolio-container .portfolio .grid-item .grid-content.Middle {
+    .portfolio-container .portfolio .grid-item .grid-content.middle {
       background-position: center center; }
-    .portfolio-container .portfolio .grid-item .grid-content.Top {
+    .portfolio-container .portfolio .grid-item .grid-content.top {
       background-position: center top; }
-    .portfolio-container .portfolio .grid-item .grid-content.Bottom {
+    .portfolio-container .portfolio .grid-item .grid-content.bottom {
       background-position: center bottom; }
   .portfolio-container .portfolio .grid-item:hover .wrapper {
     opacity: 1; }
