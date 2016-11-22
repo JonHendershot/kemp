@@ -19,9 +19,13 @@
 		overflow: hidden;
 		position: relative;
 		
-		img {
+		img.tall {
 			height: 100%;
 			width: auto;
+		}
+		img.wide {
+			width: 100%;
+			height: auto;
 		}
 		.close-lb {
 			position: absolute;

@@ -4,7 +4,7 @@
 			<div class="prev-arrow arrow dnthd">
 				<i class="fa fa-chevron-left"></i>
 			</div>
-				<img src="" class="lightbox-img" />
+				<img src="" class="lightbox-img" id="lightbox-image" />
 			<div class="next-arrow arrow dnthd">
 				<i class="fa fa-chevron-right"></i>
 			</div>

@@ -152,7 +152,9 @@
 				itemNumber = parseInt(itemInfo.item_number),
 				nextItem = itemNumber + 1,
 				prevItem = itemNumber - 1;
-		
+				
+				detectAr(src);
+				
 				$('.next-arrow').attr('data-item',nextItem);
 				$('.prev-arrow').attr('data-item',prevItem);
 				$('.lightbox-img').attr('src',src);
@@ -208,6 +210,8 @@
 			itemNumber = parseInt(itemInfo.item_number),
 			nextItemNum = itemNumber + 1,
 			prevItemNum = itemNumber - 1;
+		
+		detectAr(src);
 			
 		$('.next-arrow').attr('data-item',nextItemNum);
 		$('.prev-arrow').attr('data-item',prevItemNum);
@@ -268,13 +272,33 @@
 		});
 	}
 }(jQuery));
-
-
-	function preload() {
-		var images = new Array();
-		for (i = 0; i < preload.arguments.length; i++) {
-			images[i] = new Image()
-			images[i].src = preload.arguments[i]
-			console.log('image loaded');
-		}
+function preload() {
+	var images = new Array();
+	for (i = 0; i < preload.arguments.length; i++) {
+		images[i] = new Image()
+		images[i].src = preload.arguments[i]
 	}
+}
+function detectAr(url){
+	var img = new Image();
+
+	
+	
+	img.onload = function(){
+		// Setup Variables 
+		var	w   = img.width,
+			h   = img.height,
+			ar  = w/h;
+					
+		// Change lightbox class based on aspect ratio
+		if( ar > 1 ){ // image is wider than it is tall
+			document.getElementById('lightbox-image').className = '';
+			document.getElementById('lightbox-image').className = 'lightbox-img wide';
+		}else { // image is taller than it is wide
+			document.getElementById('lightbox-image').className = '';
+			document.getElementById('lightbox-image').className = 'lightbox-img tall';
+		}
+		
+	}
+	img.src = url;
+}

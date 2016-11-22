@@ -1325,9 +1325,12 @@ ul.socials {
     margin: 0 auto;
     overflow: hidden;
     position: relative; }
-    .lightbox .lightbox-content img {
+    .lightbox .lightbox-content img.tall {
       height: 100%;
       width: auto; }
+    .lightbox .lightbox-content img.wide {
+      width: 100%;
+      height: auto; }
     .lightbox .lightbox-content .close-lb {
       position: absolute;
       top: 0;
