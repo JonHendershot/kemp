@@ -260,10 +260,10 @@ header .menu-trigger.open .menu-lines .lines-container .line-4 {
   transform: rotate(-225deg); }
 
 header .menu-trigger.open .letter {
-  -webkit-transform: translate3d(-155%, 0, 0);
-  -moz-transform: translate3d(-155%, 0, 0);
-  -ms-transform: translate3d(-155%, 0, 0);
-  transform: translate3d(-155%, 0, 0); }
+  -webkit-transform: translate3d(-170%, 0, 0);
+  -moz-transform: translate3d(-170%, 0, 0);
+  -ms-transform: translate3d(-170%, 0, 0);
+  transform: translate3d(-170%, 0, 0); }
 
 header .nav-bar.nav-black .site-logo, header .nav-bar.nav-black .menu-trigger {
   border: 2.5px solid #000; }
@@ -1741,10 +1741,10 @@ ul.socials {
       margin: 0;
       padding-top: 75px; }
   header .menu-trigger .letter {
-    -webkit-transform: translate3d(-155%, 0, 0);
-    -moz-transform: translate3d(-155%, 0, 0);
-    -ms-transform: translate3d(-155%, 0, 0);
-    transform: translate3d(-155%, 0, 0); }
+    -webkit-transform: translate3d(-170%, 0, 0);
+    -moz-transform: translate3d(-170%, 0, 0);
+    -ms-transform: translate3d(-170%, 0, 0);
+    transform: translate3d(-170%, 0, 0); }
   header .menu-trigger .menu-lines .lines-container .mline {
     -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translate3d(0, 0, 0);
