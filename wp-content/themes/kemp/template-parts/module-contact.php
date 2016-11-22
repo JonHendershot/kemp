@@ -30,9 +30,9 @@
 			|
 		</li>
 		<li class="social linked">
-			<a href="http://www.linked.com/jonathanhkemp">
-				<span class="social-text">linkedin</span>
-				<i class="fa fa-linkedin"></i>
+			<a href="http://jonathankemp.tumblr.com">
+				<span class="social-text">tumblr</span>
+				<i class="fa fa-tumblr"></i>
 			</a>
 		</li>
 	</ul>

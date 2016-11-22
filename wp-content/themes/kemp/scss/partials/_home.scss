@@ -118,7 +118,7 @@ section:not(.home-header){
 	color: $white;
 	text-align: center;
 	padding: 125px 0;
-	h1 {
+	h2 {
 		margin-top: 0;
 	}
 	p {
@@ -195,6 +195,13 @@ section:not(.home-header){
 		max-width: 700px;
 		margin: 25px auto 0 ;
 		line-height: 2em;
+	}
+}
+.service.process {
+	padding: 200px 0;
+	height: auto;
+	.service-wrapper {
+		position: relative;
 	}
 }
 .service.branding {

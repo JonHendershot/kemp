@@ -11,7 +11,7 @@
 
 <article id="post-<?php the_ID(); ?>" class="default-post">
 	<header class="entry-header">
-		<?php the_title( '<h1 class="default">', '</h1>' ); ?>
+		<?php the_title( '<h2 class="travel-set">', '</h2>' ); ?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">

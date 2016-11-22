@@ -1,0 +1,32 @@
+section.travel-dates {
+	padding: 75px 0;
+	h1.default {
+		padding-left: 0;
+		margin: 0px;
+		text-align: center;
+	}
+	article {
+		@include max-content(width);
+		margin: 0 auto;	
+	}
+	article:before {
+		content: "";
+		width: 35px;
+		height: 2px;
+		background-color: rgba(220,220,220,0.4);
+		margin: 15px auto 20px;
+		display: block;
+	}
+	h2.travel-set {
+		font-family: $body_font;
+		font-size: 17px;
+		font-weight: 600;
+		font-style: italic;
+		padding-left: 0;
+		letter-spacing: 4px;
+	}
+	.entry-content {
+		padding-left: 10px;
+		line-height: 4px;
+	}
+}

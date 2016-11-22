@@ -8,7 +8,7 @@
 	$args = array(
 		'post_type' => 'portfolio',
 		'posts_per_page' => -1,
-		'orderby' => 'rand',
+		'orderby' => 'menu_order',
 		'cat' => $category
 	);
 	$query = new WP_Query( $args );
