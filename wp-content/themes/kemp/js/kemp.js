@@ -235,14 +235,14 @@
 		$('.lightbox-img').attr('src',''); // remove image from image container
 		$('.lightbox .image-meta h2, .lightbox .image-meta p').text(''); // remove metadata
 	});
-	$('.lightbox-content').click(function(){
-		if( ! $(this).hasClass('.close-lb') && $(this).hasClass('.image-meta') && $(this).hasClass('.arrow') ){
-			if($(this).hasClass('hidecontrols')){
-				$(this).removeClass('hidecontrols');
+	$('.clsh').click(function(){
+		
+			if($('.lightbox-content').hasClass('hidecontrols')){
+				$('.lightbox-content').removeClass('hidecontrols');
 			}else {
-				$(this).addClass('hidecontrols');
+				$('.lightbox-content').addClass('hidecontrols');
 			}
-		}
+		
 		
 	});
 }(jQuery));
