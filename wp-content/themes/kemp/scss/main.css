@@ -1864,7 +1864,13 @@ ul.socials {
   .home-contact form p {
     width: 95%; }
   .grid-item {
-    width: 100% !important; } }
+    width: 100% !important; }
+  .lightbox .lightbox-content .image-meta h2 {
+    font-size: 12px; }
+  .lightbox .lightbox-content .image-meta p {
+    font-size: 9px; }
+  .lightbox .lightbox-content .close-lb h2 {
+    font-size: 11px; } }
 
 @media (max-width: 375px) {
   .home-header h1 {
