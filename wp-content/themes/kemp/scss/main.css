@@ -1781,7 +1781,9 @@ ul.socials {
     -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translate3d(0, 0, 0);
     -ms-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0); } }
+    transform: translate3d(0, 0, 0); }
+  .lightbox .lightbox-content:hover .close-lb, .lightbox .lightbox-content:hover .image-meta, .lightbox .lightbox-content:hover .arrow {
+    opacity: 0; } }
 
 @media (max-width: 420px) {
   h2 {

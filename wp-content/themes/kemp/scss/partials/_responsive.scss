@@ -156,6 +156,11 @@
 				@include translate(0,0,0);
 			}
 		}
+		.lightbox-content:hover {
+			.close-lb, .image-meta, .arrow {
+				opacity: 0;
+			}
+		}
 	}
 	
 }
