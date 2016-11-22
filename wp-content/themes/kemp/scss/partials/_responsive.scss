@@ -134,6 +134,11 @@
 		}
 	}
 	
+	// Gridlock 
+	.grid-overlay, .grid-text {
+		display: none !important;
+	}
+	
 	// Lightbox
 	.lightbox {
 		.lightbox-content {
