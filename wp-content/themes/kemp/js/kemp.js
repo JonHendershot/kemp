@@ -171,7 +171,6 @@
 						prevUrl = $('.grid-item.item-' + prevItem).data('light').url;
 				}
 				
-				alert(nextUrl + ' , ' + prevUrl);
 				preload(nextUrl,prevUrl);
 	
 			
@@ -237,15 +236,6 @@
 		$('.lightbox-img').attr('src',''); // remove image from image container
 		$('.lightbox .image-meta h2, .lightbox .image-meta p').text(''); // remove metadata
 	});
-	/*
-$('.lightbox').click(function(){
-		if( ! $(this).hasClass('arrow') ){
-			$('.lightbox').removeClass('visible');
-			$('.lightbox iframe, .lightbox-img').attr('src',''); // stop iframe playback on close
-		}
-		
-	});
-*/
 }(jQuery));
 (function toolBox($){
 	if($('.toolbox').length){
@@ -270,10 +260,12 @@ $('.lightbox').click(function(){
 	}
 }(jQuery));
 
-var images = new Array()
+
 	function preload() {
+		var images = new Array();
 		for (i = 0; i < preload.arguments.length; i++) {
 			images[i] = new Image()
 			images[i].src = preload.arguments[i]
+			console.log('image loaded');
 		}
 	}
