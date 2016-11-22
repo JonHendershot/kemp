@@ -91,6 +91,14 @@
 			 .letter {
 				 @include translate(-155%,0,0);
 			 }
+			 .menu-lines {
+				 .lines-container {
+					 .mline {
+						 @include translate(0,0,0);
+					 }
+				 }
+			 }
+			 
 		}
 	}
 	

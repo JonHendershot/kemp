@@ -229,19 +229,19 @@ header .menu-trigger.prep .mline {
   -ms-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0); }
 
-header .menu-trigger.open .line-1 {
-  -webkit-transform: translate3d(100%, 0, 0);
-  -moz-transform: translate3d(100%, 0, 0);
-  -ms-transform: translate3d(100%, 0, 0);
-  transform: translate3d(100%, 0, 0); }
+header .menu-trigger.open .menu-lines .lines-container .line-1 {
+  -webkit-transform: translate3d(105%, 0, 0);
+  -moz-transform: translate3d(105%, 0, 0);
+  -ms-transform: translate3d(105%, 0, 0);
+  transform: translate3d(105%, 0, 0); }
 
-header .menu-trigger.open .line-3 {
-  -webkit-transform: translate3d(-100%, 0, 0);
-  -moz-transform: translate3d(-100%, 0, 0);
-  -ms-transform: translate3d(-100%, 0, 0);
-  transform: translate3d(-100%, 0, 0); }
+header .menu-trigger.open .menu-lines .lines-container .line-3 {
+  -webkit-transform: translate3d(-105%, 0, 0);
+  -moz-transform: translate3d(-105%, 0, 0);
+  -ms-transform: translate3d(-105%, 0, 0);
+  transform: translate3d(-105%, 0, 0); }
 
-header .menu-trigger.open .line-2 {
+header .menu-trigger.open .menu-lines .lines-container .line-2 {
   -ms-transform: rotate(45deg);
   /* IE 9 */
   -webkit-transform: rotate(45deg);
@@ -250,7 +250,7 @@ header .menu-trigger.open .line-2 {
   /* Mozilla ? */
   transform: rotate(45deg); }
 
-header .menu-trigger.open .line-4 {
+header .menu-trigger.open .menu-lines .lines-container .line-4 {
   -ms-transform: rotate(-225deg);
   /* IE 9 */
   -webkit-transform: rotate(-225deg);
@@ -1745,6 +1745,11 @@ ul.socials {
     -moz-transform: translate3d(-155%, 0, 0);
     -ms-transform: translate3d(-155%, 0, 0);
     transform: translate3d(-155%, 0, 0); }
+  header .menu-trigger .menu-lines .lines-container .mline {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
   .about {
     height: 100vh;
     display: flex;

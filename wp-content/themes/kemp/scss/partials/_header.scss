@@ -128,19 +128,24 @@ header {
 		}
 	}
 	.menu-trigger.open {
-		.line-1 {
-			@include translate(100%,0,0);
+		.menu-lines {
+			.lines-container {
+				.line-1 {
+					@include translate(105%,0,0);
+				}
+				.line-3 {
+					@include translate(-105%,0,0);
+				}
+				.line-2 {
+					@include rotate(45deg);
+		
+				}
+				.line-4 {
+					@include rotate(-225deg);
+				}
+			}
 		}
-		.line-3 {
-			@include translate(-100%,0,0);
-		}
-		.line-2 {
-			@include rotate(45deg);
-
-		}
-		.line-4 {
-			@include rotate(-225deg);
-		}
+		
 		.letter {
 			@include translate(-155%,0,0);
 		}
