@@ -1762,7 +1762,12 @@ ul.socials {
     display: none; }
   .home-contact ul.socials .fa {
     display: block;
-    font-size: 20px; } }
+    font-size: 20px; }
+  .lightbox .close-lb, .lightbox .image-meta, .lightbox .arrow {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); } }
 
 @media (max-width: 420px) {
   h2 {
