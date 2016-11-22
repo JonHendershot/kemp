@@ -661,6 +661,8 @@ section:not(.home-header) {
     max-width: 700px;
     margin: 25px auto 0;
     line-height: 2em; }
+    .service div.service-content br {
+      display: block; }
 
 .service.process {
   padding: 200px 0;

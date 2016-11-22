@@ -7,8 +7,8 @@
 	query_posts( $args );
 	while( have_posts() ) : the_post();
 	$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );
-	$line_1 = get_field('line_1');
-	$line_2 = get_field('line_2');
+	$line_1 = get_field("line_1");
+	$line_2 = get_field("line_2");
 	if ($ii % 2 == 0) { $color_key = 'white'; } else { $color_key = 'black'; } 
 ?>
 
