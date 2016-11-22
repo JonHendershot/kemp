@@ -1766,11 +1766,11 @@ ul.socials {
       text-align: left;
       padding-left: 0;
       margin-left: 30px; }
-  .home-contact form p {
+  form p {
     width: 72%; }
-  .home-contact ul.socials .divider, .home-contact ul.socials .social-text {
+  ul.socials .divider, ul.socials .social-text {
     display: none; }
-  .home-contact ul.socials .fa {
+  ul.socials .fa {
     display: block;
     font-size: 20px; }
   .grid-overlay, .grid-text {
