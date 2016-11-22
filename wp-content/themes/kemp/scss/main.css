@@ -1763,7 +1763,7 @@ ul.socials {
   .home-contact ul.socials .fa {
     display: block;
     font-size: 20px; }
-  .lightbox .close-lb, .lightbox .image-meta, .lightbox .arrow {
+  .lightbox .lightbox-content .close-lb, .lightbox .lightbox-content .image-meta, .lightbox .lightbox-content .arrow {
     -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translate3d(0, 0, 0);
     -ms-transform: translate3d(0, 0, 0);

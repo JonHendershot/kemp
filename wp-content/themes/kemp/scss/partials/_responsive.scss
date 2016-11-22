@@ -121,8 +121,10 @@
 	
 	// Lightbox
 	.lightbox {
-		.close-lb, .image-meta, .arrow {
-			@include translate(0,0,0);
+		.lightbox-content {
+			.close-lb, .image-meta, .arrow {
+				@include translate(0,0,0);
+			}
 		}
 	}
 	
