@@ -1766,13 +1766,15 @@ ul.socials {
       text-align: left;
       padding-left: 0;
       margin-left: 30px; }
-  form p {
+  .contact-wrapper form p {
     width: 72%; }
-  ul.socials .divider, ul.socials .social-text {
+  .contact-wrapper ul.socials .divider, .contact-wrapper ul.socials .social-text {
     display: none; }
-  ul.socials .fa {
+  .contact-wrapper ul.socials .fa {
     display: block;
     font-size: 20px; }
+  body:not(.home) .contact-wrapper form p {
+    width: 95%; }
   .grid-overlay, .grid-text {
     display: none !important; }
   .lightbox .lightbox-content .close-lb, .lightbox .lightbox-content .image-meta, .lightbox .lightbox-content .arrow {

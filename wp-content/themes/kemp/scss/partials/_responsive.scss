@@ -115,9 +115,10 @@
 			margin-left: 30px;
 		}
 	}
+
 	
 	// Contact
-
+	.contact-wrapper {
 		form {
 			 p {
 				 width: 72%;
@@ -132,7 +133,16 @@
 				font-size: 20px;
 			}
 		}
-	
+	}
+	body:not(.home){
+		.contact-wrapper {
+			form {
+				p {
+					width: 95%;
+				}
+			}
+		}
+	}
 	
 	// Gridlock 
 	.grid-overlay, .grid-text {
