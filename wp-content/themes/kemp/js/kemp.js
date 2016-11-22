@@ -159,6 +159,20 @@
 				$('.lightbox').addClass('visible');
 				$('.lightbox .image-meta h2').text(title);
 				$('.lightbox .image-meta p').text(subtitle);
+				
+				if( ! $('.grid-item.item-' + nextItem).length){
+					var nextUrl = $('.grid-item').first().data('light').url,
+						prevUrl = $('.grid-item.item-' + prevItem).data('light').url;	
+				} else if(prevItem === 0){
+					var nextUrl = $('.grid-item.item-' + nextItem).data('light').url,
+						prevUrl = $('.grid-item').last().data('light').url;
+				} else {
+					var nextUrl = $('.grid-item.item-' + nextItem).data('light').url,
+						prevUrl = $('.grid-item.item-' + prevItem).data('light').url;
+				}
+				
+				alert(nextUrl + ' , ' + prevUrl);
+				preload(nextUrl,prevUrl);
 	
 			
 		} else{ // video iframe lightbox
@@ -193,14 +207,28 @@
 			title = itemInfo.title,
 			subtitle = itemInfo.subtitle,
 			itemNumber = parseInt(itemInfo.item_number),
-			nextItem = itemNumber + 1,
-			prevItem = itemNumber - 1;
-		$('.next-arrow').attr('data-item',nextItem);
-		$('.prev-arrow').attr('data-item',prevItem);
+			nextItemNum = itemNumber + 1,
+			prevItemNum = itemNumber - 1;
+			
+		$('.next-arrow').attr('data-item',nextItemNum);
+		$('.prev-arrow').attr('data-item',prevItemNum);
 		$('.lightbox-img').attr('src',src);
 		$('.lightbox').addClass('visible');
 		$('.lightbox .image-meta h2').text(title);
 		$('.lightbox .image-meta p').text(subtitle);
+		
+		if( ! nextItem.length){
+			var nextUrl = $('.grid-item').first().data('light').url,
+				prevUrl = $('.grid-item.item-' + prevItemNum).data('light').url;	
+		} else if(prevItemNum === 0){
+			var nextUrl = $('.grid-item.item-' + nextItemNum).data('light').url,
+				prevUrl = $('.grid-item').last().data('light').url;
+		} else {
+			var nextUrl = $('.grid-item.item-' + nextItemNum).data('light').url,
+				prevUrl = $('.grid-item.item-' + prevItemNum).data('light').url;
+		}
+		
+		preload(nextUrl,prevUrl);
 				
 	});
 	
@@ -241,3 +269,11 @@ $('.lightbox').click(function(){
 		});
 	}
 }(jQuery));
+
+var images = new Array()
+	function preload() {
+		for (i = 0; i < preload.arguments.length; i++) {
+			images[i] = new Image()
+			images[i].src = preload.arguments[i]
+		}
+	}
