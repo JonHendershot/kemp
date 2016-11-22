@@ -123,7 +123,6 @@
 				padding-bottom: 56.25%;
 				background-size: cover;
 				background-repeat: no-repeat;
-				background-position: center center;
 				position: relative;
 				
 				.wrapper {
@@ -173,6 +172,15 @@
 						}
 					}
 				}
+			}
+			.grid-content.center {
+				background-position: center center;
+			}
+			.grid-content.top {
+				background-position: center top;
+			}
+			.grid-content.bottom {
+				background-position: center bottom;
 			}
 		}
 		.grid-item:hover {

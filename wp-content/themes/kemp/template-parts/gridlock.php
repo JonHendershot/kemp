@@ -78,10 +78,11 @@
 	$subtitle = get_field('photo_information');	
 	$thumb = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' );
 	$image_large = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
+	$framing = get_field('framing');
 	
 	?>
 		<div class="grid-item <?php echo "$display_class item-$ii"; ?> lightbox-trigger photo" data-light='{"url": "<?php echo $image_large[0]; ?>", "title" : "<?php echo get_the_title(); ?>", "subtitle" : "<?php echo $subtitle; ?>", "item_number": "<?php echo $ii; ?>" }'>
-			<div class="grid-content" style="background-image: url(<?php echo $thumb[0]; ?>);">
+			<div class="grid-content <?php echo $framing; ?>" style="background-image: url(<?php echo $thumb[0]; ?>);">
 				<div class="wrapper">
 					<div class="grid-overlay"></div>
 					<div class="grid-text">
