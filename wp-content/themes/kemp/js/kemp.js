@@ -272,6 +272,34 @@
 		});
 	}
 }(jQuery));
+(function testimonial($){
+	if($('.testimonials-wrapper').length){
+		function autofader(){
+			setTimeout(function(){
+				var currentID = parseInt($('.testimonial.active').attr('data-id')),
+					nextID = currentID + 1,
+					firstTest = $('.testimonial').first(),
+					lastTest = $('.testimonial').last().attr('data-id'),
+					nextTest = $('.testimonial.test-' + nextID);
+					
+					$('.tab.active, .testimonial.test-' + currentID).removeClass('active');
+	
+					if(nextTest.length){
+						nextTest.addClass('active');
+						$('.tab-' + nextID).addClass('active');
+					} else {
+						firstTest.addClass('active');
+						$('.tab-1').addClass('active');
+					}
+					console.log(nextID);
+					
+					autofader();
+			}, 15000);
+		}
+		
+		autofader();
+	}
+}(jQuery));
 function preload() {
 	var images = new Array();
 	for (i = 0; i < preload.arguments.length; i++) {

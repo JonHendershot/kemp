@@ -1209,34 +1209,54 @@ ul.socials {
       width: 50%; }
     .about-container .about-wrapper img {
       max-width: 100%; }
-    .about-container .about-wrapper .content .wrapper {
-      position: relative;
-      width: -o-calc(100% - 60px);
-      width: -moz-calc(100% - 60px);
-      width: -webkit-calc(100% - 60px);
-      width: calc(100% - 60px);
-      margin: 0 auto; }
-      .about-container .about-wrapper .content .wrapper h2 {
-        padding-left: 2px;
-        margin: 0 0 6px; }
-      .about-container .about-wrapper .content .wrapper p {
-        text-align: justify;
-        margin: 0;
-        font-size: 15px;
-        line-height: 1.5em; }
+    .about-container .about-wrapper .content {
+      position: relative; }
+      .about-container .about-wrapper .content .wrapper {
+        position: relative;
+        width: -o-calc(100% - 60px);
+        width: -moz-calc(100% - 60px);
+        width: -webkit-calc(100% - 60px);
+        width: calc(100% - 60px);
+        margin: 0 auto; }
+        .about-container .about-wrapper .content .wrapper h2 {
+          padding-left: 2px;
+          margin: 0 0 6px; }
+        .about-container .about-wrapper .content .wrapper p {
+          text-align: justify;
+          margin: 0;
+          font-size: 15px;
+          line-height: 1.5em; }
   .about-container .about-wrapper:nth-child(even) {
     background-color: #000; }
     .about-container .about-wrapper:nth-child(even) .wrapper {
       color: #dedede; }
+  .about-container .about-wrapper.testimonials .wrapper .testimonials-wrapper {
+    position: relative; }
   .about-container .about-wrapper.testimonials .wrapper p {
     text-indent: -5px; }
   .about-container .about-wrapper.testimonials .wrapper figure {
-    margin: 0; }
+    margin: 0;
+    opacity: 0;
+    transition: 0.8s all ease-in-out;
+    -webkit-transition: 0.8s all ease-in-out;
+    -moz-transition: 0.8s all ease-in-out;
+    -ms-transition: 0.8s all ease-in-out;
+    -o-transition: 0.8s all ease-in-out;
+    z-index: 9;
+    height: max-content;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: -moz-fit-content; }
   .about-container .about-wrapper.testimonials .wrapper figure:not(:first-of-type) {
     position: absolute;
     top: 0;
     left: 0;
-    opacity: 0; }
+    bottom: 0;
+    left: 0;
+    margin: auto; }
+  .about-container .about-wrapper.testimonials .wrapper figure.active {
+    opacity: 1;
+    z-index: 9999; }
   .about-container .about-wrapper.testimonials .wrapper blockquote {
     margin: 0; }
   .about-container .about-wrapper.testimonials .wrapper figcaption {
@@ -1244,6 +1264,39 @@ ul.socials {
     font-style: italic;
     margin-top: 15px;
     font-size: 14px; }
+
+.tabs {
+  display: flex;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  align-items: center;
+  -webkit-align-items: center;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  width: max-content;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: -moz-fit-content;
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+  right: 0;
+  margin: 0 auto; }
+  .tabs .tab {
+    width: 15px;
+    height: 1px;
+    background-color: #dedede;
+    opacity: 0.25;
+    transition: 0.3s all ease-in-out;
+    -webkit-transition: 0.3s all ease-in-out;
+    -moz-transition: 0.3s all ease-in-out;
+    -ms-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    cursor: pointer;
+    margin: 0 7px; }
+  .tabs .tab.active, .tabs .tab:hover {
+    opacity: 1; }
 
 /*************************************
   - - - - - - - TRAVEL - - - - - - - -

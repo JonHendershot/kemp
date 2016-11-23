@@ -27,9 +27,7 @@
 		<div class="content">
 			<div class="wrapper">
 				<h2>Testimonials</h2>
-				<p>
-					<?php echo $testimonials; ?>
-				</p>
+				<?php get_template_part('template-parts/module-testimonials'); ?>
 			</div>
 		</div>
 		<div class="headshot">

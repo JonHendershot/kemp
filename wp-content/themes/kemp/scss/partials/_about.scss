@@ -9,6 +9,7 @@
 		img { max-width: 100%; }
 		
 		.content {
+			position: relative;
 			.wrapper {
 				position: relative;
 				@include calc(width,"100% - 60px");
@@ -44,17 +45,30 @@
 	.about-wrapper.testimonials {
 		.wrapper {
 // 			text-align: center;
+			.testimonials-wrapper {
+				position: relative;
+			}
 			p{
 				text-indent: -5px;
 			}
 			figure {
 				margin: 0;
+				opacity: 0;
+				@include transition(0.8s, all, ease-in-out);
+				z-index: 9;
+				@include max-content(height);
 			}
 			figure:not(:first-of-type){
 				position: absolute;
 				top: 0;
 				left: 0;
-				opacity: 0;
+				bottom: 0;
+				left: 0;
+				margin: auto;
+			}
+			figure.active {
+				opacity: 1;
+				z-index: 9999;
 			}
 			blockquote {
 				margin: 0;
@@ -66,5 +80,26 @@
 			    font-size: 14px;
 			}
 		}
+	}
+}
+.tabs {
+	@include flexbox(center,space-between);
+	@include max-content(width);
+	position: absolute;
+	bottom: -40px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	.tab {
+		width: 15px;
+		height: 1px;
+		background-color: $white;
+		opacity: 0.25	;
+		@include transition(0.3s,all,ease-in-out);
+		cursor: pointer;
+		margin: 0 7px;
+	}
+	.tab.active, .tab:hover {
+		opacity: 1;
 	}
 }
