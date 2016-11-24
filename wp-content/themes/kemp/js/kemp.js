@@ -139,6 +139,8 @@
 }(jQuery));
 (function lightbox($){
 	windowHeight = $(window).height();
+	
+	// open lightbox
 	$('.grid-item.lightbox-trigger').click(function(){
 		
 		var item = $(this);
@@ -190,56 +192,55 @@
 		}
 		
 	});
+	
+	// display next images with click of arrows
 	$('.lightbox-content .arrow').click(function(){
-		var itemID = $(this).attr('data-item'),
-			nextItem = $('.grid-item.item-' + itemID),
-			firstItem = $('.grid-item.item-1'),
-			lastItemID = $('.grid-item').last().data('light').item_number,
-			lastItem = $('.grid-item.item-' + lastItemID);
-
-		if(nextItem.length){
-			var itemInfo = nextItem.data('light');
-		} else if(itemID > 1) {
-			var itemInfo = firstItem.data('light');
-		} else if(itemID == 1 || itemID == 0) {
-			var itemInfo = lastItem.data('light');
-		}
-		var src = itemInfo.url,
-			title = itemInfo.title,
-			subtitle = itemInfo.subtitle,
-			itemNumber = parseInt(itemInfo.item_number),
-			nextItemNum = itemNumber + 1,
-			prevItemNum = itemNumber - 1;
 		
-		detectAr(src);
-			
-		$('.next-arrow').attr('data-item',nextItemNum);
-		$('.prev-arrow').attr('data-item',prevItemNum);
-		$('.lightbox-img').attr('src',src);
-		$('.lightbox').addClass('visible');
-		$('.lightbox .image-meta h2').text(title);
-		$('.lightbox .image-meta p').text(subtitle);
-		
-		if( ! nextItem.length){
-			var nextUrl = $('.grid-item').first().data('light').url,
-				prevUrl = $('.grid-item.item-' + prevItemNum).data('light').url;	
-		} else if(prevItemNum === 0){
-			var nextUrl = $('.grid-item.item-' + nextItemNum).data('light').url,
-				prevUrl = $('.grid-item').last().data('light').url;
-		} else {
-			var nextUrl = $('.grid-item.item-' + nextItemNum).data('light').url,
-				prevUrl = $('.grid-item.item-' + prevItemNum).data('light').url;
-		}
-		
-		preload(nextUrl,prevUrl);
+		var imageID = $(this).attr('data-item');
+		nextImg(imageID);
 				
 	});
+	
+	// Handle key events while lightbox is open
+	$(document).keydown(function(e){
+		
+		// only execute if lightbox is open
+		if( $('.lightbox.image-container').hasClass('visible') ){
+			var rightArrow = 39,
+				leftArrow = 37,
+				esc = 27,
+				pressed = e.which;
+		
+			if( pressed === esc ){
+				// Close the Lightbox
+				$('.lightbox').removeClass('visible'); // close lightbox
+				$('.lightbox-img').attr('src',''); // remove image from image container
+				$('.lightbox .image-meta h2, .lightbox .image-meta p').text(''); // reset metadata
+				
+			} else {
+				// Switch the Image
+				if(pressed === 39){ // right arrow pressed
+					var imgID = $('.lightbox-content .next-arrow').attr('data-item');
+				} else if(pressed === 37){ // left arrow pressed
+					var imgID = $('.lightbox-content .prev-arrow').attr('data-item');
+				}
+				
+				nextImg(imgID);
+				console.log(imgID);
+				
+			}
+
+
+		}
+				
+	});
+	
 	$('.close-lb').click(function(){
 		$('.lightbox').removeClass('visible');
 		$('.lightbox-img').attr('src',''); // remove image from image container
 		$('.lightbox .image-meta h2, .lightbox .image-meta p').text(''); // remove metadata
 	});
-	$('.clsh').click(function(){
+	$('.clsh').click(function(){ // hide controls on mobile
 		
 			if($('.lightbox-content').hasClass('hidecontrols')){
 				$('.lightbox-content').removeClass('hidecontrols');
@@ -249,6 +250,7 @@
 		
 		
 	});
+	
 }(jQuery));
 (function toolBox($){
 	if($('.toolbox').length){
@@ -330,3 +332,115 @@ function detectAr(url){
 	}
 	img.src = url;
 }
+
+function nextImg(nextImgID){
+	
+	// Initial variables
+	var $ = jQuery,
+		nextItem = $('.grid-item.item-' + nextImgID),
+		firstItem = $('.grid-item.item-1'),
+		lastItemID = $('.grid-item').last().data('light').item_number,
+		lastItem = $('.grid-item.item-' + lastItemID);
+	
+	// Check if the image with the provided ID exists and apply the data variable accordingly
+	if(nextItem.length){ // next item exists in DOM - get the data variable
+		var itemInfo = nextItem.data('light');
+	} else if(nextImgID > 1) { // we are on the last image in the DOM - get the data of the first image
+		var itemInfo = firstItem.data('light');
+	} else if(nextImgID == 1 || nextImgID == 0) { // we are on the first image in the DOM - get the data of the last image
+		var itemInfo = lastItem.data('light');
+	}
+	
+	
+
+	// Setup variables with derived item data
+	var src = itemInfo.url, // url of next image to be displayed
+		title = itemInfo.title, // title of next image to be displayed
+		subtitle = itemInfo.subtitle, // subtitle of next image to be displayed
+		itemNumber = parseInt(itemInfo.item_number), // id number of next image to be displayed
+		nextItemNum = itemNumber + 1, // id number of item after next image to be displayed
+		prevItemNum = itemNumber - 1; // id number of item before next image to be displayed
+	
+	
+	// Detect the aspect ratio of the image and apply styled class to lightbox accordingly
+	detectAr(src); 	
+	
+	
+	// Apply changes to lightbox
+	$('.next-arrow').attr('data-item',nextItemNum);
+	$('.prev-arrow').attr('data-item',prevItemNum);
+	$('.lightbox-img').attr('src',src);
+	$('.lightbox').addClass('visible');
+	$('.lightbox .image-meta h2').text(title);
+	$('.lightbox .image-meta p').text(subtitle);
+	
+	
+	// Get url of the next and previous images based on derived information
+	if( ! nextItem.length){
+		var nextUrl = $('.grid-item').first().data('light').url,
+			prevUrl = $('.grid-item.item-' + prevItemNum).data('light').url;	
+	} else if(prevItemNum === 0){
+		var nextUrl = $('.grid-item.item-' + nextItemNum).data('light').url,
+			prevUrl = $('.grid-item').last().data('light').url;
+	} else {
+		var nextUrl = $('.grid-item.item-' + nextItemNum).data('light').url,
+			prevUrl = $('.grid-item.item-' + prevItemNum).data('light').url;
+	}
+		
+	// Preload the next and previous images in the DOM to ensure immediate switch over on next action 
+	preload(nextUrl,prevUrl);
+	
+	
+	
+/*
+	
+	ORIIGNAL CODE
+
+	var itemID = $(this).attr('data-item'),
+			nextItem = $('.grid-item.item-' + itemID),
+			firstItem = $('.grid-item.item-1'),
+			lastItemID = $('.grid-item').last().data('light').item_number,
+			lastItem = $('.grid-item.item-' + lastItemID);
+
+		if(nextItem.length){
+			var itemInfo = nextItem.data('light');
+		} else if(itemID > 1) {
+			var itemInfo = firstItem.data('light');
+		} else if(itemID == 1 || itemID == 0) {
+			var itemInfo = lastItem.data('light');
+		}
+		var src = itemInfo.url,
+			title = itemInfo.title,
+			subtitle = itemInfo.subtitle,
+			itemNumber = parseInt(itemInfo.item_number),
+			nextItemNum = itemNumber + 1,
+			prevItemNum = itemNumber - 1;
+		
+		detectAr(src);
+			
+		$('.next-arrow').attr('data-item',nextItemNum);
+		$('.prev-arrow').attr('data-item',prevItemNum);
+		$('.lightbox-img').attr('src',src);
+		$('.lightbox').addClass('visible');
+		$('.lightbox .image-meta h2').text(title);
+		$('.lightbox .image-meta p').text(subtitle);
+		
+		if( ! nextItem.length){
+			var nextUrl = $('.grid-item').first().data('light').url,
+				prevUrl = $('.grid-item.item-' + prevItemNum).data('light').url;	
+		} else if(prevItemNum === 0){
+			var nextUrl = $('.grid-item.item-' + nextItemNum).data('light').url,
+				prevUrl = $('.grid-item').last().data('light').url;
+		} else {
+			var nextUrl = $('.grid-item.item-' + nextItemNum).data('light').url,
+				prevUrl = $('.grid-item.item-' + prevItemNum).data('light').url;
+		}
+	
+		preload(nextUrl,prevUrl);
+*/	
+		
+
+}
+
+
+
