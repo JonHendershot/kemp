@@ -226,13 +226,23 @@
 				}
 				
 				nextImg(imgID);
-				console.log(imgID);
 				
 			}
 
 
 		}
 				
+	});
+	
+	// Handle Swipe events on lightbox
+	
+	$('.clsh').on('swipeleft',function(){
+		var imgID = $('.lightbox-content .next-arrow').attr('data-item');
+		nextImg(imgID);
+	});
+	$('.clsh').on('swiperight', function(){
+		var imgID = $('.lightbox-content .prev-arrow').attr('data-item');
+		nextImg(imgID);
 	});
 	
 	$('.close-lb').click(function(){
