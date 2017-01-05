@@ -773,6 +773,13 @@ section:not(.home-header) {
     width: 100%;
     height: auto;
     margin: 30px 0 !important; }
+  .single-post .entry-content img:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
 
 .know-your-world {
   padding: 300px 0 !important; }
@@ -1130,6 +1137,16 @@ a.back:hover:before, .nav-next a:hover:before {
 
 .comment-form input[type="submit"] {
   border-radius: 0 !important; }
+
+@media (max-width: 1000px) {
+  .archive-container .archive-post {
+    flex-direction: column; }
+    .archive-container .archive-post .post-thumb-container {
+      width: 100%; }
+    .archive-container .archive-post .archive-post-content {
+      width: 100%;
+      padding-left: 0 !important;
+      padding-top: 30px; } }
 
 aside {
   width: 30%;
