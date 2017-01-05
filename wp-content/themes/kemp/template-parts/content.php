@@ -12,10 +12,10 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header post-header">
 		<?php
-
+		the_title('<h1>','</h1>');
 		if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
-			<a class="back" href="<?php echo get_post_type_archive_link( 'post' ); ?>">Back to Newsletter Archive</a>
+			<a class="back" href="<?php echo get_post_type_archive_link( 'post' ); ?>">Back to Posts</a>
 			<span class="post-meta"><?php the_date(); ?> by <?php the_author_posts_link(); ?></span>
 		</div><!-- .entry-meta -->
 		<?php

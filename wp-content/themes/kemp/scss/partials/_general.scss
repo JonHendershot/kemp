@@ -59,3 +59,47 @@ body.home {
 html[lang="en-US"] {
 	margin-top: 0 !important;
 }
+.main-btn, .comment-reply-link {
+	font-size: 9px;
+	font-weight: 800;
+	letter-spacing: 1px;
+	padding: 0px 15px 0px 16px;
+	color: $white;
+	background-color: $black;
+	text-decoration: none;
+}
+.comment-reply-link {
+	padding: 5px 15px 5px 16px;
+}
+.comment-author a {
+	color: $black;
+	text-decoration: none;
+	
+}
+.single-page-container .single-wrapper img {
+	margin: 0 !important;
+}
+.comment-metadata a {
+	    color: $dividercolor;
+    text-decoration: none;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.comment-metadata {
+	margin-top: -7px;
+}
+.single-page-container .single-wrapper .comments-area .comment-body .comment-content {
+	width: 100% !important;
+}
+a.back {
+	color: $black;
+	text-decoration: none;
+}
+.screen-reader-text {
+	display: none;
+}
+.nav-links {
+	@include flexbox(center,space-between);
+	flex-direction: row-reverse;
+}
