@@ -1151,7 +1151,10 @@ a.back:hover:before, .nav-next a:hover:before {
     .archive-container .archive-post .archive-post-content {
       width: 100%;
       padding-left: 0 !important;
-      padding-top: 30px; } }
+      padding-top: 30px; }
+  .post-header .entry-meta {
+    flex-direction: column-reverse;
+    align-items: flex-start; } }
 
 aside {
   width: 30%;

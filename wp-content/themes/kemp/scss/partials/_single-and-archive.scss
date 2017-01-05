@@ -392,6 +392,12 @@ a.back:hover:before, .nav-next a:hover:before {
 			}
 		}
 	}
+	.post-header {
+		.entry-meta {
+			flex-direction: column-reverse;
+			align-items: flex-start;
+		}
+	}
 }
 // Sidebar
 aside {
