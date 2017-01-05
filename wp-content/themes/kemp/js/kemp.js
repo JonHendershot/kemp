@@ -1,3 +1,4 @@
+/************** HOLDING IN LIVE UNTIL FIXED *************
 (function menuColor($){
 	var scope = $('.menu-scope'),
 		triggerClass = $('.color-trigger'),
@@ -105,6 +106,7 @@
 
 	}
 }(jQuery));
+*/
 (function menuTrigger($){
 
 	$('.menu-trigger').click(function(){

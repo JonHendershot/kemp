@@ -470,34 +470,35 @@ header.static-nav {
   z-index: -1;
   visibility: hidden; }
 
-/*
-body.home {
-	.nav-bar.nav-white { // handle colors
-		clip: rect(0px,auto,auto,0px);		
-		
-		.site-logo, .menu-trigger {
-			border: none;
-			@include easeout(600ms);
-			
-			.letter {
-				color: $white;
-				text-shadow: -3px 0 $black;
-			}
-		}
-		.site-logo {
-			@include translate(-155%,0,0);
-		}
-		.menu-trigger {
-			@include translate(155%,0,0);
-		}
-	}
-	.nav-bar.showing {
-		.site-logo, .menu-trigger {
-			@include translate(0,0,0);
-		}
-	}
-}
-*/
+body.home .nav-bar.nav-white {
+  clip: rect(0px, auto, auto, 0px); }
+  body.home .nav-bar.nav-white .site-logo, body.home .nav-bar.nav-white .menu-trigger {
+    border: none;
+    -webkit-transition: all 600ms cubic-bezier(0.375, 0.005, 0, 1);
+    -moz-transition: all 600ms cubic-bezier(0.375, 0.005, 0, 1);
+    -o-transition: all 600ms cubic-bezier(0.375, 0.005, 0, 1);
+    transition: all 600ms cubic-bezier(0.375, 0.005, 0, 1);
+    /* custom */ }
+    body.home .nav-bar.nav-white .site-logo .letter, body.home .nav-bar.nav-white .menu-trigger .letter {
+      color: #dedede;
+      text-shadow: -3px 0 #000; }
+  body.home .nav-bar.nav-white .site-logo {
+    -webkit-transform: translate3d(-155%, 0, 0);
+    -moz-transform: translate3d(-155%, 0, 0);
+    -ms-transform: translate3d(-155%, 0, 0);
+    transform: translate3d(-155%, 0, 0); }
+  body.home .nav-bar.nav-white .menu-trigger {
+    -webkit-transform: translate3d(155%, 0, 0);
+    -moz-transform: translate3d(155%, 0, 0);
+    -ms-transform: translate3d(155%, 0, 0);
+    transform: translate3d(155%, 0, 0); }
+
+body.home .nav-bar.showing .site-logo, body.home .nav-bar.showing .menu-trigger {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
 /*************************************
   - - - - - - - HOME PAGE - - - - - - 
 **************************************/
