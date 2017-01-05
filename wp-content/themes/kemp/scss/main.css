@@ -767,8 +767,12 @@ section:not(.home-header) {
 
 .single-post .entry-content {
   padding-top: 25px; }
-  .single-post .entry-content p {
-    font-family: "Georgia", serif; }
+  .single-post .entry-content * {
+    font-family: "Georgia", serif !important; }
+  .single-post .entry-content img {
+    width: 100%;
+    height: auto;
+    margin: 30px 0 !important; }
 
 .know-your-world {
   padding: 300px 0 !important; }
