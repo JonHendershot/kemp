@@ -103,8 +103,9 @@ a.back:hover:before {
 	border-top: 1px solid $black;
 
 	.single-wrapper {
-		width: 70%;
-		padding: 50px 90px;
+		@include calc(width,"100% - 60px");
+		max-width: 1000px;
+		padding: 50px 0;
 		color: $black;
 		font-size: 14px;
 		line-height: 1.7em;

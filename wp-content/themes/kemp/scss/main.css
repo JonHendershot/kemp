@@ -871,8 +871,12 @@ a.back:hover:before {
   -webkit-justify-content: space-around;
   border-top: 1px solid #000; }
   .single-page-container .single-wrapper {
-    width: 70%;
-    padding: 50px 90px;
+    width: -o-calc(100% - 60px);
+    width: -moz-calc(100% - 60px);
+    width: -webkit-calc(100% - 60px);
+    width: calc(100% - 60px);
+    max-width: 1000px;
+    padding: 50px 0;
     color: #000;
     font-size: 14px;
     line-height: 1.7em; }
