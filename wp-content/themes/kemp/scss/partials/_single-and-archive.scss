@@ -467,4 +467,10 @@ aside {
 			}
 		}
 	}
-	
+figure {
+	figcaption {
+		padding-left: 20px;
+		border-left: 2px solid $dividercolor;
+		text-align: justify;
+	}
+}	

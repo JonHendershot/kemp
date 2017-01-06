@@ -1216,6 +1216,11 @@ aside {
     aside .search-container input[type="submit"]:hover {
       color: #000; }
 
+figure figcaption {
+  padding-left: 20px;
+  border-left: 2px solid #cdcdcd;
+  text-align: justify; }
+
 /*************************************
   - - - - - - - CONTACT - - - - - - - 
 **************************************/
