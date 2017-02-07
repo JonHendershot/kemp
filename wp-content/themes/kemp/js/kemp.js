@@ -404,4 +404,14 @@ function nextImg(nextImgID){
 }
 
 
-
+// Fix VH Issue for mobile
+(function vhFix($){
+	var vhItem = $('.vh');
+	
+	vhItem.each(function(){
+		var height = vhItem.height();
+		console.log(height);
+		
+		$(this).css({'height' : height});
+	});
+}(jQuery));

@@ -23,7 +23,7 @@ $contact_img = get_field('contact_background')['url'];
 		<p>down</p>
 	</div>
 </div>
-<section class="home-header color-trigger" style="background-image:url(<?php echo $feat_img; ?>);" data-color-key="hidden">
+<section class="home-header color-trigger vh" style="background-image:url(<?php echo $feat_img; ?>);" data-color-key="hidden">
 	<h1><?php echo $page_title; ?></h1>
 	<p><?php echo $page_sub_title; ?></p>
 <!--
@@ -45,7 +45,7 @@ $contact_img = get_field('contact_background')['url'];
 	</div>
 </section>
 
-<section class="services">
+<section class="services ">
 	
 	<?php get_template_part('template-parts/module-services'); ?>
 	
