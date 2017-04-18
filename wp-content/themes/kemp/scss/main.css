@@ -1653,7 +1653,23 @@ section.travel-dates {
         -o-transition: all 600ms cubic-bezier(0.375, 0.005, 0, 1);
         transition: all 600ms cubic-bezier(0.375, 0.005, 0, 1);
         /* custom */
-        position: relative; }
+        position: relative;
+        -webkit-animation-name: spin;
+        -webkit-animation-duration: 1400ms;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-timing-function: cubic-bezier(0.85, 0.14, 0.15, 0.86);
+        -moz-animation-name: spin;
+        -moz-animation-duration: 1400ms;
+        -moz-animation-iteration-count: infinite;
+        -moz-animation-timing-function: cubic-bezier(0.85, 0.14, 0.15, 0.86);
+        -ms-animation-name: spin;
+        -ms-animation-duration: 1400ms;
+        -ms-animation-iteration-count: infinite;
+        -ms-animation-timing-function: cubic-bezier(0.85, 0.14, 0.15, 0.86);
+        animation-name: spin;
+        animation-duration: 1400ms;
+        animation-iteration-count: infinite;
+        animation-timing-function: cubic-bezier(0.85, 0.14, 0.15, 0.86); }
         .lightbox .lightbox-content .loading .outer .circle {
           height: 8px;
           width: 8px;
@@ -1821,6 +1837,30 @@ section.travel-dates {
   -ms-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
   opacity: 1; }
+
+@-ms-keyframes spin {
+  from {
+    -ms-transform: rotate(0deg); }
+  to {
+    -ms-transform: rotate(360deg); } }
+
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg); }
+  to {
+    -moz-transform: rotate(360deg); } }
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg); } }
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
 
 /*************************************
   - - - - - - PORTFOLIO - - - - - - - -
