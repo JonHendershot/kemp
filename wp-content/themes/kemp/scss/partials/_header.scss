@@ -18,7 +18,12 @@ header {
 		}
 	}
 	.nav-bar.nav-white.bury {
-		z-index: -1;
+		.site-logo {
+			@include translate(-100px,0,0);
+		}
+		.menu-trigger {
+			@include translate(100px,0,0);
+		}
 	}
 	.nav-bar.nav-black {
 		.menu-trigger.open {
@@ -118,6 +123,10 @@ header {
 			}
 		}
 		
+	}
+	.site-logo, .menu-trigger {
+		@include easeout(400ms);
+		@include translate(0,0,0);
 	}
 	.menu-trigger.prep {
 		.letter {

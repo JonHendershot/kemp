@@ -20,6 +20,62 @@
 		overflow: hidden;
 		position: relative;
 		
+		// Loader
+		.loading {
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+			opacity: 0;
+			visibility: hidden;
+			@include easeout(600ms);
+			@include flexbox(center,center);
+			background-color: rgba(0,0,0,0.7);
+			
+			.outer {
+				height: 30px;
+				width: 30px;
+				border-radius: 25px;
+				background: transparent;
+				border: 2px solid $white;
+				display: block;
+				@include easeout(600ms);
+				position: relative;
+
+				.circle {
+					height: 8px;
+				    width: 8px;
+				    display: block;
+				    background-color: $white;
+				    border-radius: 4px;
+				    top: -4px;
+				    left: 0;
+				    right: 0;
+				    position: absolute;
+				    margin: auto;
+				}
+			}
+			.outer.spun {
+				@include rotate(360deg);
+			}
+			
+		}
+		.loading.visible {
+			opacity: 1;
+			visibility: visible;
+		}
+		// Images
+		.lightbox-img {
+			opacity: 1;
+			@include easeout(800ms);
+		}
+		.lightbox-img.hiding {
+			opacity: 0;
+		}
 		img.tall {
 			height: 100%;
 			width: auto;

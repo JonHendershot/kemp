@@ -127,13 +127,13 @@
 		}
 	});
 	
-	if( ! $('body.home').length ){ // remove this condition when menu on main is fixed
+// 	if( ! $('body.home').length ){ // remove this condition when menu on main is fixed
 			$('.menu-trigger').hover(function(){
 				$('.menu-trigger').addClass('prep');
 			}, function(){
 				$('.menu-trigger').removeClass('prep');
 			});
-	}
+// 	}
 
 	
 }(jQuery));
@@ -147,6 +147,7 @@
 		
 		if(item.hasClass('photo')){ // image lightbox
 			
+			$('.loading').addClass('visible');
 			var itemInfo = item.data('light'),
 				src = itemInfo.url,
 				title = itemInfo.title,
@@ -154,15 +155,24 @@
 				itemNumber = parseInt(itemInfo.item_number),
 				nextItem = itemNumber + 1,
 				prevItem = itemNumber - 1;
+				detectAr(src),
+				cimg = new Image();
 				
-				detectAr(src);
 				
 				$('.next-arrow').attr('data-item',nextItem);
 				$('.prev-arrow').attr('data-item',prevItem);
-				$('.lightbox-img').attr('src',src);
 				$('.lightbox').addClass('visible');
+				$('.lightbox-img').addClass('hiding').attr('src',src);
 				$('.lightbox .image-meta h2').text(title);
 				$('.lightbox .image-meta p').text(subtitle);
+				
+				cimg.src = src;
+				cimg.onload = function(){
+					$('.lightbox-img').removeClass('hiding');
+					$('.loading').removeClass('visible');
+				}
+				
+				
 				
 				if( ! $('.grid-item.item-' + nextItem).length){
 					var nextUrl = $('.grid-item').first().data('light').url,
@@ -351,6 +361,10 @@ function nextImg(nextImgID){
 		firstItem = $('.grid-item.item-1'),
 		lastItemID = $('.grid-item').last().data('light').item_number,
 		lastItem = $('.grid-item.item-' + lastItemID);
+		
+	// Show loading animation 
+		$('.loading').addClass('visible spinning');
+		
 	
 	// Check if the image with the provided ID exists and apply the data variable accordingly
 	if(nextItem.length){ // next item exists in DOM - get the data variable
@@ -369,20 +383,28 @@ function nextImg(nextImgID){
 		subtitle = itemInfo.subtitle, // subtitle of next image to be displayed
 		itemNumber = parseInt(itemInfo.item_number), // id number of next image to be displayed
 		nextItemNum = itemNumber + 1, // id number of item after next image to be displayed
-		prevItemNum = itemNumber - 1; // id number of item before next image to be displayed
-	
+		prevItemNum = itemNumber - 1, // id number of item before next image to be displayed
+		img = new Image();
 	
 	// Detect the aspect ratio of the image and apply styled class to lightbox accordingly
 	detectAr(src); 	
 	
 	
-	// Apply changes to lightbox
-	$('.next-arrow').attr('data-item',nextItemNum);
-	$('.prev-arrow').attr('data-item',prevItemNum);
-	$('.lightbox-img').attr('src',src);
-	$('.lightbox').addClass('visible');
-	$('.lightbox .image-meta h2').text(title);
-	$('.lightbox .image-meta p').text(subtitle);
+	// Apply changes to lightbox when image is loaded
+	
+		img.src = src;
+		img.onload =function(){
+			$('.next-arrow').attr('data-item',nextItemNum);
+			$('.prev-arrow').attr('data-item',prevItemNum);
+			$('.lightbox-img').attr('src',src);
+			$('.lightbox').addClass('visible');
+			$('.lightbox .image-meta h2').text(title);
+			$('.lightbox .image-meta p').text(subtitle);
+			$('.loading.visible').removeClass('visible spinning');
+		};
+	
+		
+	
 	
 	
 	// Get url of the next and previous images based on derived information
