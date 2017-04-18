@@ -127,13 +127,13 @@
 		}
 	});
 	
-// 	if( ! $('body.home').length ){ // remove this condition when menu on main is fixed
+	if( ! $('body.home').length ){ // remove this condition when menu on main is fixed
 			$('.menu-trigger').hover(function(){
 				$('.menu-trigger').addClass('prep');
 			}, function(){
 				$('.menu-trigger').removeClass('prep');
 			});
-// 	}
+	}
 
 	
 }(jQuery));
