@@ -1546,7 +1546,7 @@ section.travel-dates {
     display: block; }
   section.travel-dates article {
     background-color: #f1f1f1;
-    padding: 0 40px 40px;
+    padding: 0 50px 40px 40px;
     margin: 55px auto;
     position: relative; }
   section.travel-dates h2.travel-set {
@@ -1578,8 +1578,8 @@ section.travel-dates {
     section.travel-dates .entry-content p {
       max-width: 100%;
       padding-left: 80px;
-      text-indent: -80px;
-      margin: 10px 0;
+      text-indent: -60px;
+      margin: 5px 0;
       line-height: 15px; }
 
 /*************************************
