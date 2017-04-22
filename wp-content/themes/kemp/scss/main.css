@@ -1565,13 +1565,14 @@ section.travel-dates {
     position: relative;
     z-index: 99;
     margin-bottom: 25px;
-    max-width: 100%; }
+    max-width: 100%;
+    line-height: 15px; }
   section.travel-dates .entry-header {
     position: relative;
-    -webkit-transform: translate3d(0, -16px, 0);
-    -moz-transform: translate3d(0, -16px, 0);
-    -ms-transform: translate3d(0, -16px, 0);
-    transform: translate3d(0, -16px, 0); }
+    -webkit-transform: translate3d(0, -12px, 0);
+    -moz-transform: translate3d(0, -12px, 0);
+    -ms-transform: translate3d(0, -12px, 0);
+    transform: translate3d(0, -12px, 0); }
   section.travel-dates .entry-content {
     padding-left: 4px;
     line-height: 4px; }
