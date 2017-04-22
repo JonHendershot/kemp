@@ -18,6 +18,7 @@ $tan : #ede7ca;
 $metacolor : rgb( 200,200,200 );
 $dividercolor : rgb(205,205,205);
 $offwhite : rgb(222,222,222);
+$lightwhite : rgb(241,241,241);
 
 /*************************************
   - - - - - - MISC VARIALBES - - - - - 
@@ -55,6 +56,12 @@ $max-width : 1300px;
 	-moz-transition: $time $for $style;
 	-ms-transition: $time $for $style;
 	-o-transition: $time $for $style;
+}
+@mixin transrotate($X,$Y,$Z,$degree){
+		-webkit-transform: translate3d($X,$Y,$Z) rotate($degree);
+	-moz-transform: translate3d($X,$Y,$Z) rotate($degree);
+	-ms-transform: translate3d($X,$Y,$Z) rotate($degree);
+	transform: translate3d($X,$Y,$Z) rotate($degree);
 }
 @mixin easeout($time){
 -webkit-transition: all $time cubic-bezier(0.375, 0.005, 0.000, 1.000); 

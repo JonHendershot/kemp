@@ -5,28 +5,91 @@ section.travel-dates {
 		margin: 0px;
 		text-align: center;
 	}
-	article {
+	.tour-wrapper {
 		@include max-content(width);
-		margin: 0 auto;	
+		margin: 0 auto;
+		max-width: 98%;
 	}
-	article:before {
+
+	h1.default:after {
 		content: "";
 		width: 35px;
 		height: 2px;
-		background-color: rgba(220,220,220,0.4);
+		background-color: $lightwhite;
 		margin: 15px auto 20px;
 		display: block;
 	}
+
+	article	{
+		background-color: $lightwhite;
+		padding: 0 40px 40px;
+		margin: 55px auto;
+		position: relative;
+	}
+/*
+	article:after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 110%;
+		background-color: #fff;
+		height: 35px;
+		@include transrotate(0,15px,0,-3deg);
+	}
+	article:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 110%;
+		background-color: #fff;
+		height: 35px;
+		@include transrotate(-4px,-19px,0,-3deg);
+	}
+*/
 	h2.travel-set {
 		font-family: $body_font;
-		font-size: 17px;
+		font-size: 27px;
 		font-weight: 600;
 		font-style: italic;
 		padding-left: 0;
-		letter-spacing: 4px;
+		letter-spacing: 2px;
+		@include max-content(width);
+		margin-top: 0;
+		padding-right: 10px;
+		position: relative;
+		z-index: 99;
+		margin-bottom: 25px;
+		max-width: 100%;
+	}
+/*
+	.entry-header:after {
+		content: "";
+		width: 100%;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		top: 0;
+		margin: auto;
+		height: 2px;
+		background-color: $offwhite;
+	}
+*/
+	.entry-header {
+		position: relative;
+		@include translate(0,-16px,0);
 	}
 	.entry-content {
-		padding-left: 10px;
+		padding-left: 4px;
 		line-height: 4px;
+		
+		p {
+			max-width: 100%;
+			padding-left: 80px;
+			text-indent: -80px;
+			margin: 10px 0;
+			line-height: 15px;
+		}
 	}
 }
