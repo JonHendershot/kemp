@@ -1490,34 +1490,98 @@ ul.socials {
   - - - - - - - TRAVEL - - - - - - - -
 **************************************/
 section.travel-dates {
-  padding: 75px 0; }
+  padding: 75px 0;
+  /*
+	article:after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 110%;
+		background-color: #fff;
+		height: 35px;
+		@include transrotate(0,15px,0,-3deg);
+	}
+	article:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 110%;
+		background-color: #fff;
+		height: 35px;
+		@include transrotate(-4px,-19px,0,-3deg);
+	}
+*/
+  /*
+	.entry-header:after {
+		content: "";
+		width: 100%;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		top: 0;
+		margin: auto;
+		height: 2px;
+		background-color: $offwhite;
+	}
+*/ }
   section.travel-dates h1.default {
     padding-left: 0;
     margin: 0px;
     text-align: center; }
-  section.travel-dates article {
+  section.travel-dates .tour-wrapper {
     width: max-content;
     width: -webkit-max-content;
     width: -moz-max-content;
     width: -moz-fit-content;
-    margin: 0 auto; }
-  section.travel-dates article:before {
+    margin: 0 auto;
+    max-width: 98%; }
+  section.travel-dates h1.default:after {
     content: "";
     width: 35px;
     height: 2px;
-    background-color: rgba(220, 220, 220, 0.4);
-    margin: 15px auto 20px;
+    background-color: #f1f1f1;
+    margin: 35px auto 0px;
     display: block; }
+  section.travel-dates article {
+    background-color: #f1f1f1;
+    padding: 0 50px 40px 40px;
+    margin: 55px auto;
+    position: relative; }
   section.travel-dates h2.travel-set {
     font-family: "Maven Pro", sans-serif;
-    font-size: 17px;
+    font-size: 27px;
     font-weight: 600;
     font-style: italic;
     padding-left: 0;
-    letter-spacing: 4px; }
+    letter-spacing: 2px;
+    width: max-content;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: -moz-fit-content;
+    margin-top: 0;
+    padding-right: 10px;
+    position: relative;
+    z-index: 99;
+    margin-bottom: 25px;
+    max-width: 100%;
+    line-height: 21px; }
+  section.travel-dates .entry-header {
+    position: relative;
+    -webkit-transform: translate3d(0, -11px, 0);
+    -moz-transform: translate3d(0, -11px, 0);
+    -ms-transform: translate3d(0, -11px, 0);
+    transform: translate3d(0, -11px, 0); }
   section.travel-dates .entry-content {
-    padding-left: 10px;
+    padding-left: 4px;
     line-height: 4px; }
+    section.travel-dates .entry-content p {
+      max-width: 100%;
+      padding-left: 80px;
+      text-indent: -60px;
+      margin: 10px 0;
+      line-height: 15px; }
 
 /*************************************
   - - - - - - GRIDLOCK - - - - - - - -
