@@ -184,3 +184,9 @@ add_action('manage_posts_custom_column', 'kemp_columns_content', 10, 2);
 // *************************************************************** //
 // ******* END ADD FEATURED IMAGE THUMBNAIL TO POST TYPE  ******** //
 // *************************************************************** //
+
+
+function custom_excerpt_length( $length ) {
+	return 140;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
