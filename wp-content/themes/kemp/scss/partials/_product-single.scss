@@ -1,9 +1,12 @@
-body.single-product {
-	#container #content {
+body.woocommerce-page {
+	#container #content, #primary {
 		width: 95%;
 		margin: 25px auto;
 		max-width: $max-width;
 	}
+	
+}
+body.single-product {
 	.summary.entry-summary {
 		> h1 {
 			letter-spacing: 8px;
@@ -79,6 +82,9 @@ body.single-product {
 			margin-top: 0px;
 		}
 	}
+	div.product .woocommerce-product-rating {
+		margin-bottom: 0px;
+	}
 	
 	.cart button[type="submit"], .cart button[type="submit"]:hover, #respond input#submit[type="submit"] {
 		background-color: $black;
@@ -92,6 +98,6 @@ body.single-product {
 	    letter-spacing: 3px;
 	    font-family: $body_font;
 	    border-radius: 0;
-	}
-	
+	}	
 }
+

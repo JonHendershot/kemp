@@ -1,0 +1,12 @@
+.woocommerce-cart {
+	.coupon {
+		display: none;
+	}
+	.wc-proceed-to-checkout a.checkout-button {
+		background-color: $black;
+		&:hover {
+			background-color: $black;
+			opacity: 0.8;
+		}
+	}
+}

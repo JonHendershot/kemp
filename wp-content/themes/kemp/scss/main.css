@@ -2378,7 +2378,7 @@ section.travel-dates {
     form .wpcf7-form-control-wrap input[type="text"], form .wpcf7-form-control-wrap input[type="phone"], form .wpcf7-form-control-wrap input[type="email"] {
       padding: 7px 10px 4px !important; } }
 
-body.single-product #container #content {
+body.woocommerce-page #container #content, body.woocommerce-page #primary {
   width: 95%;
   margin: 25px auto;
   max-width: 1300px; }
@@ -2443,7 +2443,45 @@ body.single-product .woocommerce-tabs.wc-tabs-wrapper {
   body.single-product .woocommerce-tabs.wc-tabs-wrapper #comments {
     margin-top: 0px; }
 
+body.single-product div.product .woocommerce-product-rating {
+  margin-bottom: 0px; }
+
 body.single-product .cart button[type="submit"], body.single-product .cart button[type="submit"]:hover, body.single-product #respond input#submit[type="submit"] {
+  background-color: #000;
+  color: #dedede;
+  text-transform: uppercase;
+  font-size: 10px;
+  outline: none;
+  border: none;
+  padding: 6px 10px 6px 13px;
+  margin-left: 0;
+  letter-spacing: 3px;
+  font-family: "Maven Pro", sans-serif;
+  border-radius: 0; }
+
+.woocommerce-cart .coupon {
+  display: none; }
+
+.woocommerce-cart .wc-proceed-to-checkout a.checkout-button {
+  background-color: #000; }
+  .woocommerce-cart .wc-proceed-to-checkout a.checkout-button:hover {
+    background-color: #000;
+    opacity: 0.8; }
+
+.woocommerce-checkout #payment #place_order {
+  background-color: #000; }
+  .woocommerce-checkout #payment #place_order:hover {
+    opacity: 0.8; }
+
+.woocommerce.post-type-archive .woocommerce-loop-product__title {
+  color: #000;
+  text-transform: none;
+  letter-spacing: 0px;
+  font-family: "Maven Pro", sans-serif; }
+  .woocommerce.post-type-archive .woocommerce-loop-product__title:visited {
+    color: #000; }
+
+.woocommerce.post-type-archive ul.products li.product a.button.product_type_simple {
   background-color: #000;
   color: #dedede;
   text-transform: uppercase;
