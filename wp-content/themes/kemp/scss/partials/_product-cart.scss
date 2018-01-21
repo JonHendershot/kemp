@@ -9,4 +9,20 @@
 			opacity: 0.8;
 		}
 	}
+	a.remove:hover {
+		color: red !important;
+		background-color: transparent;
+	}
+	td.product-name a {
+		color: $black;
+	}
+	
+}
+.woocommerce .woocommerce-message .button, .woocommerce td.actions .button, .woocommerce td.actions .button:disabled[disabled] {
+	@extend .main-btn; 
+	border-radius: 0px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-transform: uppercase;
+	color: $white;
 }

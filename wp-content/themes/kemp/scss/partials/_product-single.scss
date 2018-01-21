@@ -1,18 +1,37 @@
 body.woocommerce-page {
 	#container #content, #primary {
 		width: 95%;
-		margin: 25px auto;
+		margin: 60px auto;
 		max-width: $max-width;
 	}
 	
 }
 body.single-product {
+	.back-to-shop {
+		color: $black;
+		margin-bottom: 20px;
+		display: inline-block;
+		text-decoration: none;
+		display: flex;
+		align-items: center;
+
+		
+		&:before {
+			content: "\f053";
+			font-family: "FontAwesome";
+			color: $black;
+			display: block;
+			font-size: 10px;
+			margin-right: 8px;
+			padding-top: 2px;
+		}
+	}
 	.summary.entry-summary {
 		> h1 {
-			letter-spacing: 8px;
+			letter-spacing: 1px;
 		    font-size: 30px;
-		    font-weight: 400;
-		    font-family: $header_font;
+		    font-weight: 500;
+		    font-family: $body_font;
 		}
 		.product_title {
 			margin: 0;

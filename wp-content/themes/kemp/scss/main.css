@@ -35,7 +35,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Big Caslon", serif;
   text-transform: uppercase; }
 
-h2, h1.default {
+h2, h1.default, .woocommerce.post-type-archive h1.page-title {
   letter-spacing: 8px;
   font-size: 40px;
   font-weight: 400;
@@ -83,7 +83,7 @@ body.home .site-content {
 html[lang="en-US"] {
   margin-top: 0 !important; }
 
-.main-btn, .comment-reply-link {
+.main-btn, .woocommerce .woocommerce-message .button, .woocommerce td.actions .button, .woocommerce td.actions .button[disabled]:disabled, .comment-reply-link {
   font-size: 9px;
   font-weight: 800;
   letter-spacing: 1px;
@@ -1526,7 +1526,7 @@ section.travel-dates {
 		background-color: $offwhite;
 	}
 */ }
-  section.travel-dates h1.default {
+  section.travel-dates h1.default, section.travel-dates .woocommerce.post-type-archive h1.page-title, .woocommerce.post-type-archive section.travel-dates h1.page-title {
     padding-left: 0;
     margin: 0px;
     text-align: center; }
@@ -1537,7 +1537,7 @@ section.travel-dates {
     width: -moz-fit-content;
     margin: 0 auto;
     max-width: 98%; }
-  section.travel-dates h1.default:after {
+  section.travel-dates h1.default:after, section.travel-dates .woocommerce.post-type-archive h1.page-title:after, .woocommerce.post-type-archive section.travel-dates h1.page-title:after {
     content: "";
     width: 35px;
     height: 2px;
@@ -2380,14 +2380,30 @@ section.travel-dates {
 
 body.woocommerce-page #container #content, body.woocommerce-page #primary {
   width: 95%;
-  margin: 25px auto;
+  margin: 60px auto;
   max-width: 1300px; }
 
+body.single-product .back-to-shop {
+  color: #000;
+  margin-bottom: 20px;
+  display: inline-block;
+  text-decoration: none;
+  display: flex;
+  align-items: center; }
+  body.single-product .back-to-shop:before {
+    content: "\f053";
+    font-family: "FontAwesome";
+    color: #000;
+    display: block;
+    font-size: 10px;
+    margin-right: 8px;
+    padding-top: 2px; }
+
 body.single-product .summary.entry-summary > h1 {
-  letter-spacing: 8px;
+  letter-spacing: 1px;
   font-size: 30px;
-  font-weight: 400;
-  font-family: "Big Caslon", serif; }
+  font-weight: 500;
+  font-family: "Maven Pro", sans-serif; }
 
 body.single-product .summary.entry-summary .product_title {
   margin: 0; }
@@ -2468,6 +2484,20 @@ body.single-product .cart button[type="submit"], body.single-product .cart butto
     background-color: #000;
     opacity: 0.8; }
 
+.woocommerce-cart a.remove:hover {
+  color: red !important;
+  background-color: transparent; }
+
+.woocommerce-cart td.product-name a {
+  color: #000; }
+
+.woocommerce .woocommerce-message .button, .woocommerce td.actions .button, .woocommerce td.actions .button:disabled[disabled] {
+  border-radius: 0px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  color: #dedede; }
+
 .woocommerce-checkout #payment #place_order {
   background-color: #000; }
   .woocommerce-checkout #payment #place_order:hover {
@@ -2493,3 +2523,18 @@ body.single-product .cart button[type="submit"], body.single-product .cart butto
   letter-spacing: 3px;
   font-family: "Maven Pro", sans-serif;
   border-radius: 0; }
+
+.woocommerce.post-type-archive h1.page-title {
+  padding-left: 0px; }
+
+.woocommerce-result-count, form.woocommerce-ordering {
+  display: none; }
+
+.button {
+  transition: 0.3s opacity ease-in-out;
+  opacity: 1; }
+  .button:hover {
+    opacity: 0.7; }
+
+.woocommerce-breadcrumb {
+  display: none; }

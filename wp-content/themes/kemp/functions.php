@@ -190,3 +190,9 @@ function custom_excerpt_length( $length ) {
 	return 140;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+add_action('woocommerce_before_single_product','add_woo_back_button');
+function add_woo_back_button() {
+	$shop_page = get_permalink( woocommerce_get_page_id( 'shop' ) );
+	echo "<a href='$shop_page' class='back-to-shop'>Back to Shop</a>";
+}

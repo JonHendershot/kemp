@@ -22,4 +22,22 @@
 	    font-family: $body_font;
 	    border-radius: 0;
 	}
+	h1.page-title {
+		@extend .default; 
+		padding-left: 0px;
+	}
+}
+.woocommerce-result-count, form.woocommerce-ordering {
+	display: none;
+}
+.button {
+	transition: 0.3s opacity ease-in-out;
+	opacity: 1;
+	
+	&:hover {
+		opacity: 0.7;
+	}
+}
+.woocommerce-breadcrumb {
+	display: none;
 }
